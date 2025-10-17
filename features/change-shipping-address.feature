@@ -4,13 +4,13 @@ Feature: Change shipping address
   So that the order can be delivered to someone else or a different location
 
   Background:
-    Given I am on the checkout page
+    Given Customer is on the checkout page
     And the "Ship to a different address" checkbox is checked
     And the shipping address form is displayed
   
   @smoke @regression
   Scenario: Submitting with empty required fields in the shipping address form should show validation errors
-    When I click on the "Place Order" button without filling the required fields:
+    When Customer clicks on the "Place Order" button without filling the required fields:
       | Field              |
       | First name         |
       | Last name          |
@@ -20,7 +20,7 @@ Feature: Change shipping address
       | State / County     |
       | Postcode / ZIP     |
       | Email address      |
-    Then I should see the following error messages displayed at the top of the billing form:
+    Then Customer should see the following error messages displayed at the top of the billing form:
       | Message                                      |
       | Billing First name is a required field.      |
       | Billing Last name is a required field.       |
