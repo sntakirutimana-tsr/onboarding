@@ -4,7 +4,6 @@ Feature: Browse products via categories
     Given Customer is on the homepage
     And the navigation menu is shown
 
-
   Scenario: Customer to browse men products
     And the "Men" option is available on navigation menu
     When a Customer clicks the "Men" option on navigation menu
