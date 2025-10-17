@@ -1,24 +1,21 @@
+@regression
 Feature: Adding Product to Cart
 
-    Background: Customer navigate to the store homepage
-
-        Given a Customer is on home store page
-
-
+        
+    @smoke
     Scenario Outline: Customer to add product to cart from the home page
-
+        Given Customer is on home page
         When Customer clicks the "ADD TO CART" button for "<product_name>"
-        And a confirmation tick (✔) appears on "ADD TO CART" button with "view cart" link displayed
+        Then a confirmation tick (✔) appears on "ADD TO CART" button with "view cart" link displayed
         And the cart counter increments by 1
-        And Customer clicks on "view cart" link
-        Then the cart page is open
+        Then Customer clicks on "view cart" link
+        And the cart page is open
         And product "<product_name>" is displayed in cart
-
 
         Examples:
 
-            | product_name |
-            | Blue Shoes |
+            | product_name     |
+            | Blue Shoes       |
             | Denim Blue Jeans |
 
 
@@ -36,8 +33,8 @@ Feature: Adding Product to Cart
 
         Examples:
 
-            | product_name |
-            | Blue Shoes |
+            | product_name     |
+            | Blue Shoes       |
             | Denim Blue Jeans |
 
 
