@@ -1,8 +1,7 @@
 Feature: Browse products via categories
 
   Background:
-    Given Customer is on the homepage
-    And the navigation menu is shown
+    Given Customer is on the homepage 
 
   Scenario: Customer to browse men products
     When a Customer clicks the "Men" option on navigation menu
