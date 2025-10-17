@@ -1,7 +1,4 @@
 Feature: Change shipping address
-  As a customer
-  I want to ship my order to a different address if needed
-  So that the order can be delivered to someone else or a different location
 
   Background:
     Given Customer is on the checkout page
