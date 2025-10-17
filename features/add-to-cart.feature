@@ -22,11 +22,13 @@ Feature: Adding Product to Cart
             | Denim Blue Jeans |
 
 
+    # To be refactored, as it has actions implied in the observation
     Scenario Outline: Customer can add product to cart from the product detail page
-        When Customer clicks on "<product_name"
-        And "<product_name" detail page is open
+        When Customer clicks on "<product_name>"
+        # Must add something specific to test. Eg: Check if the URL has changed, ... HINT: What is the indication?
+        And "<product_name>" detail page is open  
         And clicks on "ADD TO CART" button
-        And '"<product_name" has been added to your cart.' message is displayed
+        And '"<product_name>" has been added to your cart.' message is displayed
         Then cart counter increments by 1
         And Customer clicks on "view cart" button
         Then the cart page is open
@@ -38,3 +40,5 @@ Feature: Adding Product to Cart
             | Blue Shoes |
             | Denim Blue Jeans |
 
+
+# MISSING TEST CASE: Adding an already existing product, Adding to cart from categories, ???

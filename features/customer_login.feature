@@ -7,8 +7,11 @@ Feature: Customer Login
   Scenario Outline: Customer to log in with the right credentials
     When customer enters email as "<email_or_username>"
     And Customer enters password as "<password>"
+    # Should specify the action to be performed.
     And Customer submits the form
+    # On the below step, we should specify indication to check if we got to the dashboard
     Then Customer should be redirected to their dashboard
+
     
     Examples:
       | email_or_username       | password  |
