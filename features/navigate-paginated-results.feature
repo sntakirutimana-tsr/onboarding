@@ -1,4 +1,4 @@
-Feature: Navigate paginated products page results
+Feature: Browse products via categories
 
   Scenario: System to hide pagination controls
     Given the Customer is on the men products page
