@@ -1,0 +1,42 @@
+[
+  {
+    "employeeId": 4031,
+    "firstName": "Sharonda",
+    "lastName": "Marquardt",
+    "age": 60,
+    "department": "Utilities",
+    "employmentType": "Part-Time"
+  },
+  {
+    "employeeId": 1779,
+    "firstName": "Leandro",
+    "lastName": "Kerluke",
+    "age": 35,
+    "department": "Health, Wellness and Fitness",
+    "employmentType": "Full-Time"
+  },
+  {
+    "employeeId": 4511,
+    "firstName": "Mathew",
+    "lastName": "McDermott",
+    "age": 26,
+    "department": "Philanthropy",
+    "employmentType": "Part-Time"
+  },
+  {
+    "employeeId": 7623,
+    "firstName": "Werner",
+    "lastName": "Kessler",
+    "age": 34,
+    "department": "Broadcast Media",
+    "employmentType": "Full-Time"
+  },
+  {
+    "employeeId": 3005,
+    "firstName": "Imogene",
+    "lastName": "Mayer",
+    "age": 44,
+    "department": "Internet",
+    "employmentType": "Part-Time"
+  }
+]
