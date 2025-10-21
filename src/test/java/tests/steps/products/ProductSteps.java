@@ -2,9 +2,9 @@ package tests.steps.products;
 
 import io.cucumber.java.en.Then;
 
-public class ProductSteps {
+public final class ProductSteps {
 
   @Then("a message {string} should be displayed")
-  public void containsResultsIndicatorMessage(String msg) {
+  public void message_should_be_displayed(String msg) {
   }
 }

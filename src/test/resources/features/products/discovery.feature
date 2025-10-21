@@ -3,15 +3,15 @@ Feature: Product discovery by search, filtering, and sorting
   Scenario Outline: Customer searches a product by name
     Given a Customer is on "<page_name>" products page
     When a Customer enters search keyword as "<search_keyword>"
-    And clicks the "SEARCH" button
+    And clicks the ❝SEARCH❞ button
     Then only products containing the "<search_keyword>" in their names should be displayed
 
     Examples:
       | page_name   | search_keyword |
-      | Store       | Jeans          |
-      | Men         | Shoes          |
-      | Women       | Denim          |
-      | Accessories | Bracelet       |
+      | store       | Jeans          |
+      | men's       | Shoes          |
+      | women's     | Denim          |
+      | accessories | Bracelet       |
 
   Scenario Outline: System returns no products for unknown product name
     Given a Customer is on "<page_name>" page

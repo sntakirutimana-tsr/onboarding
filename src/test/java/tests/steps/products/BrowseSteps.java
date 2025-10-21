@@ -6,14 +6,14 @@ import io.cucumber.java.en.When;
 public final class BrowseSteps {
 
   @When("a Customer navigates to {string} products page")
-  public void navigateToProductsPage(String pageName) {
+  public void customer_navigates_to_products_page(String pageName) {
   }
 
   @And("a list of products should be displayed, each showing an image, name, category as {string}, rating as stars, and price")
-  public void containsAListOfProducts(String category) {
+  public void list_of_products_should_be_displayed(String category) {
   }
 
   @And("the ❝Our Best Sellers❞ section should display three products, each showing an image, name, rating as stars, and price")
-  public void containsOurBestSellersContent() {
+  public void our_best_sellers_section_should_display_three_products() {
   }
 }
