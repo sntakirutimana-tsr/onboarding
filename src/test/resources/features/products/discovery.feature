@@ -14,14 +14,14 @@ Feature: Product discovery by search, filtering, and sorting
       | accessories | Bracelet       |
 
   Scenario Outline: System returns no products for unknown product name
-    Given a Customer is on "<page_name>" page
+    Given a Customer is on "<page_name>" products page
     When a Customer enters search keyword as "<search_keyword>"
-    And clicks the "SEARCH" button
-    Then a message "No products were found matching your selection." should be displayed
+    And clicks the ❝SEARCH❞ button
+    Then a message ❝No products were found matching your selection.❞ should be displayed
 
     Examples:
       | page_name | search_keyword |
-      | Store     | 567            |
+      | store     | 567            |
 
   Scenario Outline: Customer sorts products by valid criteria
     Given a Customer is on "<page_name>" products page
