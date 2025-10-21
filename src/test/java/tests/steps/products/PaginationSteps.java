@@ -1,14 +1,9 @@
 package tests.steps.products;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
 public final class PaginationSteps {
-
-  @Given("a Customer is on the store page")
-  public void customer_is_on_the_store_page() {
-  }
 
   @When("a Customer navigates {string} through page results using {string}")
   public void customer_navigates_through_page_results_using(String direction, String control) {

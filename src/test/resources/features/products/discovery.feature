@@ -97,7 +97,7 @@ Feature: Product discovery by search, filtering, and sorting
       | accessories | 150       | 200       |
 
   Scenario Outline: Customer filters products by valid sub-category
-    Given a Customer is on store page
+    Given a Customer is on "store" products page
     When a Customer selects sub-category as "<category>"
     Then only products in the "<category>" sub-category should be displayed
 
@@ -112,8 +112,8 @@ Feature: Product discovery by search, filtering, and sorting
       | Purses And Handbags |
 
   Scenario Outline: System rejects invalid category filter
-    Given a Customer is on "<page_name>" page
-    When a Customer selects the sub-category as "<sub_category>"
+    Given a Customer is on "<page_name>" products page
+    When a Customer selects sub-category as "<sub_category>"
     Then the list of products should remain unchanged
 
     Examples:
@@ -121,9 +121,10 @@ Feature: Product discovery by search, filtering, and sorting
       | store     | unknown      |
 
   Scenario Outline: Customer refines product discovery by combining filters and sorters
+    Given a Customer is on "store" products page
     When a Customer selects sub-category as "<category>"
     And sets the price range from <min_price> to <max_price>
-    And clicks the "FILTER" button
+    And clicks the ❝FILTER❞ button
     And sorts products by "<sort_order>"
     Then only products in "<category>" within the price range of <min_price> to <max_price> should be displayed
     And products should be sorted in "<sort_order>" order

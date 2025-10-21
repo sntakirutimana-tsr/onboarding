@@ -28,10 +28,12 @@ public final class DiscoverySteps {
   }
 
   @When("a Customer sorts products by {string}")
+  @And("sorts products by {string}")
   public void customer_sorts_products_by(String criterion) {
   }
 
   @Then("the products should be re-arranged by {string}")
+  @And("products should be sorted in {string} order")
   public void products_should_be_reordered_by(String criterion) {
   }
 
@@ -44,6 +46,7 @@ public final class DiscoverySteps {
   }
 
   @When("a Customer sets the price range from {int} to {int}")
+  @And("sets the price range from {int} to {int}")
   public void customer_sets_price_range_filter(int min, int max) {
   }
 
@@ -58,4 +61,16 @@ public final class DiscoverySteps {
   @Then("the system should clamp the price range to stay within the allowed range of 10 to 150")
   public void system_should_clamp_price_range_to_stay_within_allowed_range_of_10_to_150() {
   }
+
+  @When("a Customer selects sub-category as {string}")
+  public void customer_selects_sub_category_as(String subCategory) {}
+
+  @Then("only products in the {string} sub-category should be displayed")
+  public void only_products_in_the_sub_category_should_be_displayed(String subCategory) {}
+
+  @Then("the list of products should remain unchanged")
+  public void list_of_products_should_remain_unchanged() {}
+
+  @Then("only products in {string} within the price range of {int} to {int} should be displayed")
+  public void only_products_in_selected_sub_category_and_within_price_range_set_should_be_displayed(String subCategory, int min, int max) {}
 }
