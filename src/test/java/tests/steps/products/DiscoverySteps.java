@@ -24,17 +24,38 @@ public final class DiscoverySteps {
   }
 
   @Then("a message ❝No products were found matching your selection.❞ should be displayed")
-  public void message_no_products_were_found_should_be_displayed() {}
+  public void message_no_products_were_found_should_be_displayed() {
+  }
 
   @When("a Customer sorts products by {string}")
-  public void customer_sorts_products_by(String criterion) {}
+  public void customer_sorts_products_by(String criterion) {
+  }
 
   @Then("the products should be re-arranged by {string}")
-  public void products_should_be_reordered_by(String criterion) {}
+  public void products_should_be_reordered_by(String criterion) {
+  }
 
   @When("a Customer selects an invalid sorting criterion as {string}")
-  public void customer_selects_invalid_sorting_criterion_as(String criterion) {}
+  public void customer_selects_invalid_sorting_criterion_as(String criterion) {
+  }
 
   @Then("the system should ignore the invalid option, maintaining the default products order")
-  public void system_should_ignore_invalid_option_maintaining_default_products_order() {}
+  public void system_should_ignore_invalid_option_maintaining_default_products_order() {
+  }
+
+  @When("a Customer sets the price range from {int} to {int}")
+  public void customer_sets_price_range_filter(int min, int max) {
+  }
+
+  @And("clicks the ❝FILTER❞ button")
+  public void click_the_FILTER_button() {
+  }
+
+  @Then("only products within {int} to {int} should be displayed")
+  public void only_products_within_the_provided_price_range_should_be_displayed(int min, int max) {
+  }
+
+  @Then("the system should clamp the price range to stay within the allowed range of 10 to 150")
+  public void system_should_clamp_price_range_to_stay_within_allowed_range_of_10_to_150() {
+  }
 }

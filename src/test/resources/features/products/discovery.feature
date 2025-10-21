@@ -58,19 +58,19 @@ Feature: Product discovery by search, filtering, and sorting
   Scenario Outline: Customer filters products by valid price range
     Given a Customer is on "<page_name>" products page
     When a Customer sets the price range from <min_price> to <max_price>
-    And clicks the "FILTER" button
+    And clicks the ❝FILTER❞ button
     Then only products within <min_price> to <max_price> should be displayed
 
     Examples:
       | page_name   | min_price | max_price |
-      | Store       | 10        | 150       |
-      | Store       | 50        | 150       |
-      | Men         | 10        | 150       |
-      | Men         | 50        | 150       |
-      | Women       | 10        | 150       |
-      | Women       | 50        | 150       |
-      | Accessories | 10        | 150       |
-      | Accessories | 50        | 150       |
+      | store       | 10        | 150       |
+      | store       | 50        | 150       |
+      | men's       | 10        | 150       |
+      | men's       | 50        | 150       |
+      | women's     | 10        | 150       |
+      | women's     | 50        | 150       |
+      | accessories | 10        | 150       |
+      | accessories | 50        | 150       |
 
   Scenario Outline: System constrains price filter to allowed range
     Given a Customer is on "<page_name>" products page
@@ -79,22 +79,22 @@ Feature: Product discovery by search, filtering, and sorting
 
     Examples:
       | page_name   | min_price | max_price |
-      | Store       | 0         | 9         |
-      | Store       | 151       | 200       |
-      | Store       | 0         | 10        |
-      | Store       | 150       | 200       |
-      | Men         | 0         | 9         |
-      | Men         | 151       | 200       |
-      | Men         | 0         | 10        |
-      | Men         | 150       | 200       |
-      | Women       | 0         | 9         |
-      | Women       | 151       | 200       |
-      | Women       | 0         | 10        |
-      | Women       | 150       | 200       |
-      | Accessories | 0         | 9         |
-      | Accessories | 151       | 200       |
-      | Accessories | 0         | 10        |
-      | Accessories | 150       | 200       |
+      | store       | 0         | 9         |
+      | store       | 151       | 200       |
+      | store       | 0         | 10        |
+      | store       | 150       | 200       |
+      | men's       | 0         | 9         |
+      | men's       | 151       | 200       |
+      | men's       | 0         | 10        |
+      | men's       | 150       | 200       |
+      | women's     | 0         | 9         |
+      | women's     | 151       | 200       |
+      | women's     | 0         | 10        |
+      | women's     | 150       | 200       |
+      | accessories | 0         | 9         |
+      | accessories | 151       | 200       |
+      | accessories | 0         | 10        |
+      | accessories | 150       | 200       |
 
   Scenario Outline: Customer filters products by valid sub-category
     Given a Customer is on store page
