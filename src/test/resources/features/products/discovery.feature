@@ -30,18 +30,18 @@ Feature: Product discovery by search, filtering, and sorting
 
     Examples:
       | page_name   | sort_criteria      |
-      | Store       | average rating     |
-      | Store       | price: low to high |
-      | Store       | price: high to low |
-      | Men         | average rating     |
-      | Men         | price: low to high |
-      | Men         | price: high to low |
-      | Women       | average rating     |
-      | Women       | price: low to high |
-      | Women       | price: high to low |
-      | Accessories | average rating     |
-      | Accessories | price: low to high |
-      | Accessories | price: high to low |
+      | store       | average rating     |
+      | store       | price: low to high |
+      | store       | price: high to low |
+      | men's       | average rating     |
+      | men's       | price: low to high |
+      | men's       | price: high to low |
+      | women's     | average rating     |
+      | women's     | price: low to high |
+      | women's     | price: high to low |
+      | accessories | average rating     |
+      | accessories | price: low to high |
+      | accessories | price: high to low |
 
   Scenario Outline: System rejects invalid sorting criterion
     Given a Customer is on "<page_name>" products page
@@ -50,10 +50,10 @@ Feature: Product discovery by search, filtering, and sorting
 
     Examples:
       | page_name   | sorting_option      |
-      | Store       | RandomInvalidOption |
-      | Men         | UnsupportedSort     |
-      | Women       | InvalidCriterion    |
-      | Accessories | FakeSortOption      |
+      | store       | RandomInvalidOption |
+      | men's       | UnsupportedSort     |
+      | men's       | InvalidCriterion    |
+      | accessories | FakeSortOption      |
 
   Scenario Outline: Customer filters products by valid price range
     Given a Customer is on "<page_name>" products page
