@@ -2,7 +2,7 @@ Feature: Browse product results with pagination
 
   Scenario Outline: Customer navigates through paginated results
     Given a Customer is on the store page
-    When a Customer navigates "<direction>" using "<control>"
+    When a Customer navigates "<direction>" through page results using "<control>"
     Then a message "<results_message>" should be displayed
     And the corresponding set of products should be displayed
     And the pagination controls should reflect the current page "<current_page>"
