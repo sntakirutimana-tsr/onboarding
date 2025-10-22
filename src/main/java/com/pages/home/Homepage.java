@@ -43,24 +43,24 @@ public final class Homepage extends Page {
     };
   }
 
-  public ProductsPage navigateToMen() {
+  ProductsPage navigateToMen() {
     menOption.click();
     return new MenProductsPage("Men", getDriver());
   }
 
-  private ProductsPage navigateToStore() {
+  ProductsPage navigateToStore() {
     storeOption.click();
     return new StorePage("Store", getDriver());
   }
 
-  private ProductsPage navigateToAccessories() {
+  ProductsPage navigateToAccessories() {
     accessoriesOption.click();
-    return new AccessoriesProductsPage("Women", getDriver());
+    return new AccessoriesProductsPage("Accessories", getDriver());
   }
 
-  private ProductsPage navigateToWomen() {
+  ProductsPage navigateToWomen() {
     womenOption.click();
-    return new WomenProductsPage("Accessories", getDriver());
+    return new WomenProductsPage("Women", getDriver());
   }
 
   public static Homepage visit() {

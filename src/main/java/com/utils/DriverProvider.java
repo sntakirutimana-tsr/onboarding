@@ -40,6 +40,7 @@ public final class DriverProvider {
       default -> throw new RuntimeException("Unknown browser~" + browser);
     };
     log.info("✅ {} webdriver initiated successfully", browser);
+    webDriver.manage().window().maximize();
     driver.set(webDriver);
     return webDriver;
   }

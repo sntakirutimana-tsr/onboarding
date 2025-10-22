@@ -1,6 +1,7 @@
 package com.pages;
 
 import com.pages.concerns.Waits;
+import com.utils.Executor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -19,12 +20,7 @@ public abstract class Page extends Waits {
   }
 
   public final boolean isLoaded() {
-    try {
-      prepareIsLoadedCheckpoints();
-      return true;
-    } catch (Throwable e) {
-      return false;
-    }
+    return Executor.hasEvaluatedAndSucceed(this::prepareIsLoadedCheckpoints);
   }
 
   protected WebElement findElement(By by) {
