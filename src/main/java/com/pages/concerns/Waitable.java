@@ -2,8 +2,12 @@ package com.pages.concerns;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 
 public interface Waitable extends Drivable {
+  void waitForElementToBeInteractive(WebElement element, int timeoutInSec);
+  void waitFor(ExpectedCondition<?> condition, int timeoutInSec);
+
   /**
    * Waits for the visibility of an element located by the specified {@link By} locator within the given timeout period.
    * <p>
@@ -14,11 +18,10 @@ public interface Waitable extends Drivable {
    *
    * @param locator       the {@link By} locator used to find the element
    * @param timeoutInSecs the maximum time to wait in seconds for the element to become visible
-   * @return the {@link WebElement} once it becomes visible
    * @throws org.openqa.selenium.TimeoutException       if the element does not become visible within the timeout
    * @throws org.openqa.selenium.NoSuchElementException if the locator does not find any element in the DOM
    */
-  WebElement waitForVisibility(By locator, int timeoutInSecs);
+  void waitForVisibility(By locator, int timeoutInSecs);
 
   /**
    * Waits for the visibility of an element specified {@link WebElement} proxy within the given timeout period.

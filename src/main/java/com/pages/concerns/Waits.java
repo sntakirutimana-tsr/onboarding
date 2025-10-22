@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,8 +18,18 @@ public abstract class Waits implements Waitable {
   }
 
   @Override
-  public WebElement waitForVisibility(By locator, int timeoutInSecs) {
-    return wait(timeoutInSecs).until(ExpectedConditions.visibilityOfElementLocated(locator));
+  public void waitForElementToBeInteractive(WebElement element, int timeoutInSec) {
+    wait(timeoutInSec).until(ExpectedConditions.elementToBeClickable(element));
+  }
+
+  @Override
+  public void waitFor(ExpectedCondition<?> condition, int timeoutInSec) {
+    wait(timeoutInSec).until(condition);
+  }
+
+  @Override
+  public void waitForVisibility(By locator, int timeoutInSecs) {
+    wait(timeoutInSecs).until(ExpectedConditions.visibilityOfElementLocated(locator));
   }
 
   @Override
