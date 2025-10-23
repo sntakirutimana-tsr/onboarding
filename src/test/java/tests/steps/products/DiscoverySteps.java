@@ -1,5 +1,10 @@
 package tests.steps.products;
 
+import com.pages.product.ProductsPage;
+import tests.steps.CommonSteps;
+
+import com.utils.RunContext;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,14 +14,22 @@ public final class DiscoverySteps {
 
   @Given("a Customer is on {string} products page")
   public void customer_is_on_products_page(String pageName) {
+    RunContext.setPage(CommonSteps.ensureProductPageIsAccessible(pageName));
+    RunContext.setPageName(pageName);
   }
 
   @When("a Customer enters search keyword as {string}")
   public void customer_enters_search_keyword_as(String keyword) {
+    ((ProductsPage) RunContext.getPage())
+      .searchByName()
+      .enterKeyword(keyword);
   }
 
   @And("clicks the ❝SEARCH❞ button")
   public void click_the_SEARCH_button() {
+    ((ProductsPage) RunContext.getPage())
+      .searchByName()
+      .clickSearchButton(RunContext.getPageName());
   }
 
   @And("only products containing the {string} in their names should be displayed")
@@ -63,14 +76,18 @@ public final class DiscoverySteps {
   }
 
   @When("a Customer selects sub-category as {string}")
-  public void customer_selects_sub_category_as(String subCategory) {}
+  public void customer_selects_sub_category_as(String subCategory) {
+  }
 
   @Then("only products in the {string} sub-category should be displayed")
-  public void only_products_in_the_sub_category_should_be_displayed(String subCategory) {}
+  public void only_products_in_the_sub_category_should_be_displayed(String subCategory) {
+  }
 
   @Then("the list of products should remain unchanged")
-  public void list_of_products_should_remain_unchanged() {}
+  public void list_of_products_should_remain_unchanged() {
+  }
 
   @Then("only products in {string} within the price range of {int} to {int} should be displayed")
-  public void only_products_in_selected_sub_category_and_within_price_range_set_should_be_displayed(String subCategory, int min, int max) {}
+  public void only_products_in_selected_sub_category_and_within_price_range_set_should_be_displayed(String subCategory, int min, int max) {
+  }
 }

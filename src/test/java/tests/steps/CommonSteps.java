@@ -27,4 +27,11 @@ public final class CommonSteps {
     assertTrue(page.isLoaded());
     return page;
   }
+
+  public static ProductsPage ensureProductPageIsAccessible(String name) {
+    Homepage home = (Homepage) CommonSteps.ensureHomepageIsAccessible();
+    ProductsPage page = home.browseProducts(name);
+    assertTrue(page.isLoaded());
+    return page;
+  }
 }

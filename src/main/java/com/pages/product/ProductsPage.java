@@ -25,6 +25,15 @@ public abstract class ProductsPage extends Page {
     this.headerText = headerText;
   }
 
+  public static ProductsPage buildFor(String page, WebDriver driver) {
+    return switch (page.toLowerCase()) {
+      case "accessories" -> new AccessoriesProductsPage("Accessories", driver);
+      case "men" -> new MenProductsPage("Men", driver);
+      case "women" -> new WomenProductsPage("Women", driver);
+      default -> new StorePage("Store", driver);
+    };
+  }
+
   public final PriceRangeFilter priceRangeFilter(int min, int max) {
     return new PriceRangeFilter(driver, findElement(By.id("woocommerce_price_filter-3")), min, max);
   }
@@ -74,6 +83,10 @@ public abstract class ProductsPage extends Page {
     );
   }
 
+  public SearchByName searchByName() {
+    return new SearchByName(driver, findElement(By.id("woocommerce_product_search-1")));
+  }
+
   protected void prepareHeaderAndResultsCounterCheckpoints() {
     waitForVisibility(By.xpath(FormatUtils.f("//h1[text()='{}']", headerText)), 5);
     waitForVisibility(resultsCounter, 5);
@@ -82,9 +95,8 @@ public abstract class ProductsPage extends Page {
   @Override
   protected void prepareIsLoadedCheckpoints() {
     prepareHeaderAndResultsCounterCheckpoints();
-    WebDriver driver = getDriver();
     new SortBy(driver, findElement(By.cssSelector("select[name='orderby']"))).ensureAllCheckpointsAreReady();
-    new SearchByName(driver, findElement(By.id("woocommerce_product_search-1"))).ensureAllCheckpointsAreReady();
+    searchByName().ensureAllCheckpointsAreReady();
     new SubCategoryFilter(driver, findElement(By.id("woocommerce_product_categories-3"))).ensureAllCheckpointsAreReady();
   }
 }

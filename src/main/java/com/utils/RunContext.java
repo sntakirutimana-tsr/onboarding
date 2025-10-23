@@ -12,14 +12,23 @@ import java.util.List;
 @Slf4j
 public final class RunContext {
   private static final ThreadLocal<Page> page = new ThreadLocal<>();
+  private static final ThreadLocal<String> pageName = new ThreadLocal<>();
   private static final ThreadLocal<List<String>> productNameList = new ThreadLocal<>();
 
-  public static <P extends Page> void setPage(P currentPage) {
-    page.set(currentPage);
+  public static <P extends Page> void setPage(P value) {
+    page.set(value);
   }
 
   public static Page getPage() {
     return page.get();
+  }
+
+  public static void setPageName(String name) {
+    pageName.set(name);
+  }
+
+  public static String getPageName() {
+    return pageName.get();
   }
 
   public static void setProductNameList(List<String> value) {
@@ -32,6 +41,7 @@ public final class RunContext {
 
   public static void clear() {
     page.remove();
+    pageName.remove();
     productNameList.remove();
   }
 }

@@ -34,33 +34,15 @@ public final class Homepage extends Page {
   }
 
   public ProductsPage browseProducts(String pageName) {
-    return switch (pageName.replaceAll("'s$", "").toLowerCase()) {
-      case "men" -> navigateToMen();
-      case "women" -> navigateToWomen();
-      case "accessories" -> navigateToAccessories();
-      case "store" -> navigateToStore();
+    String page = pageName.replaceAll("'s$", "").toLowerCase();
+    switch (page) {
+      case "men" -> menOption.click();
+      case "women" -> womenOption.click();
+      case "accessories" -> accessoriesOption.click();
+      case "store" -> storeOption.click();
       default -> throw new IllegalArgumentException("Unknown menu option: " + pageName);
-    };
-  }
-
-  ProductsPage navigateToMen() {
-    menOption.click();
-    return new MenProductsPage("Men", getDriver());
-  }
-
-  ProductsPage navigateToStore() {
-    storeOption.click();
-    return new StorePage("Store", getDriver());
-  }
-
-  ProductsPage navigateToAccessories() {
-    accessoriesOption.click();
-    return new AccessoriesProductsPage("Accessories", getDriver());
-  }
-
-  ProductsPage navigateToWomen() {
-    womenOption.click();
-    return new WomenProductsPage("Women", getDriver());
+    }
+    return ProductsPage.buildFor(page, driver);
   }
 
   public static Homepage visit() {

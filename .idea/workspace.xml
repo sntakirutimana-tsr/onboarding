@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Add complete logic for homepage">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/home/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/home/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SearchByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SearchByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/PaginationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/PaginationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/ProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/ProductSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,21 +32,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="34Sn1yHmPaer1sNk3dFIcwrK5Mp" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Feature: browse.executor": "Run",
+    "Cucumber Java.Feature: pagination.executor": "Run",
+    "Cucumber Java.Scenario: .executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page.executor": "Run",
+    "Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer searches a product by name.executor": "Run",
+    "Maven.onboarding [clean].executor": "Run",
+    "Maven.onboarding [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "sprint/3-automation",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/steve/Projects/onboarding",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pages.product" />
@@ -119,6 +149,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1" />
@@ -136,6 +175,13 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1761143675601</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Add complete logic for homepage" />
+      <created>1761215632224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761215632224</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

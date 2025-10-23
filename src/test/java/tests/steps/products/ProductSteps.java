@@ -2,7 +2,6 @@ package tests.steps.products;
 
 import tests.steps.CommonSteps;
 
-import com.pages.home.Homepage;
 import com.pages.product.ProductsPage;
 import com.utils.RunContext;
 
@@ -15,9 +14,7 @@ public final class ProductSteps {
 
   @Given("a Customer is on store products page")
   public void customer_is_on_store_products_page() {
-    Homepage home = (Homepage) CommonSteps.ensureHomepageIsAccessible();
-    ProductsPage page = CommonSteps.ensureProductPageIsAccessible(home, "store");
-    RunContext.setPage(page);
+    RunContext.setPage(CommonSteps.ensureProductPageIsAccessible("store"));
   }
 
   @Then("a message {string} should be displayed")
