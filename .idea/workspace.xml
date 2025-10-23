@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Add complete logic for homepage">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pages.product" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1">
+    <configuration name="Scenario: Customer browses products by category or store page -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature:14" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer browses products by category or store page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer browses products by category or store page$&quot; --name &quot;^Customer browses products by category or store page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer browses products by category or store page -  - Example n°1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Customer browses products by category or store page -  - Example n°4" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature:17" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer browses products by category or store page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer browses products by category or store page$&quot; --name &quot;^Customer browses products by category or store page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer browses products by category or store page -  - Example n°4" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Customer navigates through paginated results -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature:12" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer navigates through paginated results$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer navigates through paginated results$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer navigates through paginated results -  - Example n°1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: " />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4" />
+        <item itemvalue="Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Scenario: " />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Add complete logic for homepage">
+      <option name="closed" value="true" />
+      <created>1761143675601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761143675601</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add complete logic for homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add complete logic for homepage" />
+  </component>
+</project>
