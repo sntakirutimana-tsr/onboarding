@@ -15,7 +15,6 @@ public abstract class ProductCard extends Component {
   private final String PRICE_REGEX = "^\\$\\d+(\\.\\d{2})?$";
 
   protected WebElement name;
-  protected WebElement addToCartButton;
 
   public ProductCard(WebDriver driver, WebElement root) {
     super(driver, root);
@@ -65,6 +64,10 @@ public abstract class ProductCard extends Component {
   public double getRatePercentage() {
     String value = rateWidth().getAttribute("style");
     return Double.parseDouble(Objects.requireNonNull(value).replaceAll("\\D", ""));
+  }
+
+  public String getName() {
+    return getText(name);
   }
 
   @Override

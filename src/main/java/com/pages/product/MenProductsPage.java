@@ -1,8 +1,5 @@
 package com.pages.product;
 
-import com.pages.product.components.PriceRangeFilter;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public final class MenProductsPage extends ProductsPage {
@@ -13,7 +10,6 @@ public final class MenProductsPage extends ProductsPage {
   @Override
   public void prepareIsLoadedCheckpoints() {
     super.prepareIsLoadedCheckpoints();
-    new PriceRangeFilter(driver, findElement(By.id("woocommerce_price_filter-3")), 20, 150)
-      .ensureAllCheckpointsAreReady();
+    priceRangeFilter(20, 150).ensureAllCheckpointsAreReady();
   }
 }

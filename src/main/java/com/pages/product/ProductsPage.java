@@ -25,12 +25,22 @@ public abstract class ProductsPage extends Page {
     this.headerText = headerText;
   }
 
+  public final PriceRangeFilter priceRangeFilter(int min, int max) {
+    return new PriceRangeFilter(driver, findElement(By.id("woocommerce_price_filter-3")), min, max);
+  }
+
   List<WebElement> productList() {
     return getDriver().findElements(By.cssSelector("ul.products li"));
   }
 
-  public final boolean hasProductList(String category) {
-    ExpectedCondition<Boolean> listSizeBetween3And8 = new ExpectedCondition<>() {
+  protected List<RegularProdCard> productCardList() {
+    return productList().stream()
+      .map(r -> new RegularProdCard(getDriver(), r))
+      .toList();
+  }
+
+  ExpectedCondition<Boolean> productListSizeCondition() {
+    return new ExpectedCondition<>() {
       @Override
       public Boolean apply(WebDriver driver) {
         int size = productList().size();
@@ -42,9 +52,16 @@ public abstract class ProductsPage extends Page {
         return "Number of products must be between 1 and 8";
       }
     };
-    return Executor.hasEvaluatedAndSucceed(() -> waitFor(listSizeBetween3And8, 5)) && productList().stream()
-      .map(r -> new RegularProdCard(getDriver(), r))
-      .allMatch(p -> Executor.hasEvaluatedAndSucceed(() -> p.ensureAllCheckpointsAreReady(category)));
+  }
+
+  public final boolean hasProductList() {
+    return Executor.hasEvaluatedAndSucceed(() -> waitFor(productListSizeCondition(), 5));
+  }
+
+  public final boolean hasProductList(String category) {
+    return hasProductList() &&
+      productCardList().stream()
+        .allMatch(p -> Executor.hasEvaluatedAndSucceed(() -> p.ensureAllCheckpointsAreReady(category)));
   }
 
   public String getResultsCount() {
@@ -57,11 +74,14 @@ public abstract class ProductsPage extends Page {
     );
   }
 
-  @Override
-  protected void prepareIsLoadedCheckpoints() {
+  protected void prepareHeaderAndResultsCounterCheckpoints() {
     waitForVisibility(By.xpath(FormatUtils.f("//h1[text()='{}']", headerText)), 5);
     waitForVisibility(resultsCounter, 5);
+  }
 
+  @Override
+  protected void prepareIsLoadedCheckpoints() {
+    prepareHeaderAndResultsCounterCheckpoints();
     WebDriver driver = getDriver();
     new SortBy(driver, findElement(By.cssSelector("select[name='orderby']"))).ensureAllCheckpointsAreReady();
     new SearchByName(driver, findElement(By.id("woocommerce_product_search-1"))).ensureAllCheckpointsAreReady();

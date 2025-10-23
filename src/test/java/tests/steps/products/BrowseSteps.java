@@ -3,6 +3,7 @@ package tests.steps.products;
 import com.pages.home.Homepage;
 import com.pages.product.ProductsPage;
 import com.utils.RunContext;
+import tests.steps.CommonSteps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
@@ -13,8 +14,7 @@ public final class BrowseSteps {
 
   @When("a Customer navigates to {string} products page")
   public void customer_navigates_to_products_page(String pageName) {
-    ProductsPage page = ((Homepage) RunContext.getPage()).browseProducts(pageName);
-    assertTrue(page.isLoaded());
+    ProductsPage page = CommonSteps.ensureProductPageIsAccessible((Homepage) RunContext.getPage(), pageName);
     RunContext.setPage(page);
   }
 

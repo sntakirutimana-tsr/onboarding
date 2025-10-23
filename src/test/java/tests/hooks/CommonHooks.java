@@ -1,6 +1,7 @@
 package tests.hooks;
 
 import com.utils.DriverProvider;
+import com.utils.RunContext;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -16,9 +17,10 @@ public class CommonHooks {
   public void setup() {
     DriverProvider.get();
   }
-  
+
   @After
   public void teardown() {
+    RunContext.clear();
     WebDriver webDriver = DriverProvider.get();
     if (webDriver != null) {
       try {
