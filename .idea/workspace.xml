@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Add complete logic for homepage">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/home/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/home/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SearchByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SearchByName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/PaginationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/PaginationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/ProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/ProductSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,11 +177,20 @@
       <option name="presentableId" value="Default" />
       <updated>1761215632224</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix issues with pagination.feature">
+      <option name="closed" value="true" />
+      <created>1761217881420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761217881420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add complete logic for homepage" />
+    <MESSAGE value="Fix issues with pagination.feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix issues with pagination.feature" />
   </component>
 </project>

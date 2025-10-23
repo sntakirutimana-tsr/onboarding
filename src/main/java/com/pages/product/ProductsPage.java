@@ -12,9 +12,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
+import lombok.Getter;
+
 import java.util.List;
 
 public abstract class ProductsPage extends Page {
+  @Getter
   private final String headerText;
 
   @FindBy(css = "p.woocommerce-result-count")
@@ -48,12 +51,12 @@ public abstract class ProductsPage extends Page {
       .toList();
   }
 
-  ExpectedCondition<Boolean> productListSizeCondition() {
+  ExpectedCondition<Boolean> productListSizeCondition(int minSize) {
     return new ExpectedCondition<>() {
       @Override
       public Boolean apply(WebDriver driver) {
         int size = productList().size();
-        return size >= 3 && size <= 8;
+        return size >= minSize && size <= 8;
       }
 
       @Override
@@ -64,7 +67,7 @@ public abstract class ProductsPage extends Page {
   }
 
   public final boolean hasProductList() {
-    return Executor.hasEvaluatedAndSucceed(() -> waitFor(productListSizeCondition(), 5));
+    return Executor.hasEvaluatedAndSucceed(() -> waitFor(productListSizeCondition(3), 5));
   }
 
   public final boolean hasProductList(String category) {
