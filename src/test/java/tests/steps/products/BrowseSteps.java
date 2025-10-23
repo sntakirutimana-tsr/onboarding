@@ -1,9 +1,10 @@
 package tests.steps.products;
 
+import tests.steps.CommonSteps;
+
 import com.pages.home.Homepage;
 import com.pages.product.ProductsPage;
 import com.utils.RunContext;
-import tests.steps.CommonSteps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;

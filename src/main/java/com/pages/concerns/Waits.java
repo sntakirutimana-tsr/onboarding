@@ -36,12 +36,6 @@ public abstract class Waits implements Waitable {
   public void waitForVisibility(WebElement element, int timeoutInSecs) {
     wait(timeoutInSecs).until(ExpectedConditions.visibilityOf(element));
   }
-
-  @Override
-  public void waitForTextVisibility(WebElement element, String expected, int timeoutInSecs) {
-    wait(timeoutInSecs)
-      .until(ExpectedConditions.textToBePresentInElement(element, expected));
-  }
 }
 
 
