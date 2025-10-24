@@ -3,12 +3,13 @@ package com.utils;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 
 import java.util.function.BooleanSupplier;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@Slf4j
 public final class Executor {
+  private static final Logger logger = LoggerFactoryUtil.getLogger(Executor.class);
   public static boolean hasEvaluatedAndSucceed(Runnable runnable) {
     try {
       runnable.run();
@@ -20,7 +21,7 @@ public final class Executor {
 
   public static void raiseIf(BooleanSupplier supplier, String error) {
     if (!supplier.getAsBoolean()) {
-      log.error(error);
+      logger.error(error);
       throw new RuntimeException(error);
     }
   }

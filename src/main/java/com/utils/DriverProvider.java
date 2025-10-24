@@ -13,15 +13,15 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.Objects;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@Slf4j
 public final class DriverProvider {
+  private static final Logger log = LoggerFactoryUtil.getLogger(DriverProvider.class);
   private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
   public static void remove() {

@@ -3,15 +3,17 @@ package com.pages.product.components;
 import com.pages.Page;
 import com.pages.product.ProductsPage;
 
+import com.utils.DriverProvider;
+import com.utils.LoggerFactoryUtil;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.slf4j.Logger;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public final class SortBy extends Component {
+  private static final Logger log = LoggerFactoryUtil.getLogger(SortBy.class);
+
   public SortBy(WebDriver driver, WebElement root) {
     super(driver, root);
   }
