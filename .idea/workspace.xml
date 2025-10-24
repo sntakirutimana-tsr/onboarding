@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/FormatUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/FormatUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/home/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/home/Homepage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -61,12 +59,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "sprint/3-automation",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/steve/Projects/onboarding",
+    "last_opened_file_path": "/Users/dn-tsr/Documents/projects/dev/onboarding",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -189,6 +196,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add complete logic for homepage">
       <option name="closed" value="true" />
@@ -204,6 +219,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761215632224</updated>
+      <workItem from="1761291738344" duration="4057000" />
     </task>
     <task id="LOCAL-00002" summary="Fix issues with pagination.feature">
       <option name="closed" value="true" />
@@ -215,6 +231,9 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />

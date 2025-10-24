@@ -47,7 +47,7 @@ public final class Homepage extends Page {
 
   public static Homepage visit() {
     WebDriver driver = DriverProvider.get();
-    driver.get("https://askomdch.com/");
+    driver.get(Page.BASE_URL);
     return new Homepage(driver);
   }
 }

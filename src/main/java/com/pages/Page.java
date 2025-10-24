@@ -14,6 +14,8 @@ public abstract class Page extends Waits {
   @Getter
   protected final WebDriver driver;
 
+  public static final String BASE_URL = "https://askomdch.com/";
+
   public Page(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
