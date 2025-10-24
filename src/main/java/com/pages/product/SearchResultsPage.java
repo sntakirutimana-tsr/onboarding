@@ -1,5 +1,6 @@
 package com.pages.product;
 
+import com.pages.product.components.PriceRangeFilter;
 import com.utils.Executor;
 import com.utils.FormatUtils;
 
@@ -12,15 +13,14 @@ public class SearchResultsPage extends ProductsPage {
   }
 
   @Override
+  public PriceRangeFilter priceRangeFilter() {
+    return priceRangeFilter(10, 150);
+  }
+
+  @Override
   protected void prepareIsLoadedCheckpoints() {
     waitForVisibility(
       By.xpath(FormatUtils.f("//h1[text()='{}']", getHeaderText())), 5);
-  }
-
-  public final boolean hasNoProductFoundMessage() {
-    return Executor.hasEvaluatedAndSucceed(() ->
-      waitForVisibility(
-        By.xpath("//p[contains(@class, 'woocommerce-no-products-found') and contains(text(), 'No products were found matching your selection.')]"), 5));
   }
 
   public final boolean hasOnlyProductsWhoseNamesContain(String productPartialName) {

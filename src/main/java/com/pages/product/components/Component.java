@@ -49,11 +49,11 @@ public abstract class Component extends Waits {
     return getRoot().findElements(by);
   }
 
-  protected void hasElement(By by) {
+  protected void ensureExistenceOfElement(By by) {
     Executor.raiseIf(() -> findElement(by).isDisplayed(), "No element found for locator: " + by);
   }
 
-  protected void hasElement(WebElement element) {
+  protected void ensureExistenceOfElement(WebElement element) {
     Executor.raiseIf(() -> element != null && element.isDisplayed());
   }
 }

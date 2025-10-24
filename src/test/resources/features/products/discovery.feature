@@ -1,5 +1,7 @@
+@regression
 Feature: Product discovery by search, filtering, and sorting
 
+  @smoke
   Scenario Outline: Customer searches a product by name
     Given a Customer is on "<page_name>" products page
     When a Customer enters search keyword as "<search_keyword>"
@@ -55,7 +57,8 @@ Feature: Product discovery by search, filtering, and sorting
       | men's       | InvalidCriterion    |
       | accessories | FakeSortOption      |
 
-  Scenario Outline: Customer filters products by valid price range
+  @smoke
+  Scenario Outline: Customer filters products by price range
     Given a Customer is on "<page_name>" products page
     When a Customer sets the price range from <min_price> to <max_price>
     And clicks the ❝FILTER❞ button
@@ -64,37 +67,30 @@ Feature: Product discovery by search, filtering, and sorting
     Examples:
       | page_name   | min_price | max_price |
       | store       | 10        | 150       |
-      | store       | 50        | 150       |
+      | store       | 16        | 151       |
       | men's       | 10        | 150       |
-      | men's       | 50        | 150       |
+      | men's       | 16        | 151       |
       | women's     | 10        | 150       |
-      | women's     | 50        | 150       |
+      | women's     | 16        | 151       |
       | accessories | 10        | 150       |
-      | accessories | 50        | 150       |
+      | accessories | 16        | 151       |
 
-  Scenario Outline: System constrains price filter to allowed range
+  Scenario Outline: System returns no products for outbound price range
     Given a Customer is on "<page_name>" products page
     When a Customer sets the price range from <min_price> to <max_price>
-    Then the system should clamp the price range to stay within the allowed range of 10 to 150
+    And clicks the ❝FILTER❞ button
+    Then a message ❝No products were found matching your selection.❞ should be displayed
 
     Examples:
       | page_name   | min_price | max_price |
       | store       | 0         | 9         |
       | store       | 151       | 200       |
-      | store       | 0         | 10        |
-      | store       | 150       | 200       |
       | men's       | 0         | 9         |
       | men's       | 151       | 200       |
-      | men's       | 0         | 10        |
-      | men's       | 150       | 200       |
       | women's     | 0         | 9         |
       | women's     | 151       | 200       |
-      | women's     | 0         | 10        |
-      | women's     | 150       | 200       |
       | accessories | 0         | 9         |
       | accessories | 151       | 200       |
-      | accessories | 0         | 10        |
-      | accessories | 150       | 200       |
 
   Scenario Outline: Customer filters products by valid sub-category
     Given a Customer is on "store" products page

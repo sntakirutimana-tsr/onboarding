@@ -36,7 +36,7 @@ public abstract class ProductCard extends Component {
   }
 
   boolean isOnSale() {
-    return Executor.hasEvaluatedAndSucceed(() -> hasElement(By.cssSelector(".onsale"))) || priceTags().size() == 2;
+    return Executor.hasEvaluatedAndSucceed(() -> ensureExistenceOfElement(By.cssSelector(".onsale"))) || priceTags().size() == 2;
   }
 
   boolean hasName() {
@@ -50,7 +50,7 @@ public abstract class ProductCard extends Component {
 
   boolean hasPrice() {
     if (isOnSale())
-      return getPrice(0) < getPrice(1);
+      return getPrice(0) > getPrice(1);
     return priceTags().size() == 1 && getText(priceTags().get(0)).matches("^\\$\\d+(\\.\\d{2})?$");
   }
 
@@ -80,7 +80,7 @@ public abstract class ProductCard extends Component {
 
   @Override
   public void ensureAllCheckpointsAreReady() {
-    hasElement(By.cssSelector("img"));
+    ensureExistenceOfElement(By.cssSelector("img"));
     Executor.raiseIf(this::hasName);
     Executor.raiseIf(this::hasRating);
     Executor.raiseIf(this::hasPrice, "Product must have one or two price tags");

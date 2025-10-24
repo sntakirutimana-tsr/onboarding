@@ -29,17 +29,14 @@ public abstract class ProductsPage extends Page {
     this.headerText = headerText;
   }
 
-  public static ProductsPage buildFor(String page, WebDriver driver) {
-    return switch (page.toLowerCase()) {
+  public static ProductsPage buildFor(String pageName, WebDriver driver) {
+    String page = pageName.replaceAll("'s$", "").toLowerCase();
+    return switch (page) {
       case "accessories" -> new AccessoriesProductsPage("Accessories", driver);
       case "men" -> new MenProductsPage("Men", driver);
       case "women" -> new WomenProductsPage("Women", driver);
       default -> new StorePage("Store", driver);
     };
-  }
-
-  public final PriceRangeFilter priceRangeFilter(int min, int max) {
-    return new PriceRangeFilter(driver, findElement(By.id("woocommerce_price_filter-3")), min, max);
   }
 
   public List<String> productNameList() {
@@ -71,6 +68,14 @@ public abstract class ProductsPage extends Page {
     };
   }
 
+  public boolean areAllProductsInPriceRange(double minPrice, double maxPrice) {
+    return productCardList().stream()
+      .allMatch(p -> {
+        double productPrice = p.getPrice();
+        return productPrice >= minPrice && productPrice <= maxPrice;
+      });
+  }
+
   ExpectedCondition<Boolean> productListSizeCondition(int minSize) {
     return new ExpectedCondition<>() {
       @Override
@@ -96,6 +101,12 @@ public abstract class ProductsPage extends Page {
         .allMatch(p -> Executor.hasEvaluatedAndSucceed(() -> p.ensureAllCheckpointsAreReady(category)));
   }
 
+  public final boolean hasNoProductFoundMessage() {
+    return Executor.hasEvaluatedAndSucceed(() ->
+      waitForVisibility(
+        By.xpath("//p[contains(@class, 'woocommerce-no-products-found') and contains(text(), 'No products were found matching your selection.')]"), 5));
+  }
+
   public String getResultsCount() {
     return resultsCounter.getText();
   }
@@ -106,6 +117,12 @@ public abstract class ProductsPage extends Page {
     );
   }
 
+  public final PriceRangeFilter priceRangeFilter(int min, int max) {
+    return new PriceRangeFilter(driver, findElement(By.id("woocommerce_price_filter-3")), min, max);
+  }
+
+  public abstract PriceRangeFilter priceRangeFilter();
+
   public SearchByName searchByName() {
     return new SearchByName(driver, findElement(By.id("woocommerce_product_search-1")));
   }
@@ -115,15 +132,28 @@ public abstract class ProductsPage extends Page {
   }
 
   protected void prepareHeaderAndResultsCounterCheckpoints() {
-    waitForVisibility(By.xpath(FormatUtils.f("//h1[text()='{}']", headerText)), 5);
+    waitForVisibility(By.xpath(FormatUtils.f("//h1[text()='{}']", headerText)), 10);
     waitForVisibility(resultsCounter, 5);
   }
 
-  @Override
-  protected void prepareIsLoadedCheckpoints() {
+  public final boolean isLoaded(int minPrice, int maxPrice) {
+    return Executor.hasEvaluatedAndSucceed(() -> prepareIsLoadedCheckpoints(minPrice, maxPrice));
+  }
+
+  void prepareCheckpoints() {
     prepareHeaderAndResultsCounterCheckpoints();
     sortBy().ensureAllCheckpointsAreReady();
     searchByName().ensureAllCheckpointsAreReady();
     new SubCategoryFilter(driver, findElement(By.id("woocommerce_product_categories-3"))).ensureAllCheckpointsAreReady();
+  }
+
+  protected final void prepareIsLoadedCheckpoints(int minPrice, int maxPrice) {
+    prepareCheckpoints();
+    priceRangeFilter(minPrice, maxPrice).ensureAllCheckpointsAreReady();
+  }
+
+  @Override
+  protected void prepareIsLoadedCheckpoints() {
+    prepareCheckpoints();
   }
 }

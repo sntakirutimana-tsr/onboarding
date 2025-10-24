@@ -15,7 +15,6 @@ import io.cucumber.junit.CucumberOptions;
     "junit:target/cucumber.xml"
   },
   monochrome = true,
-  dryRun = true,
   tags = "@smoke"
 )
 public class RunSmokeTests {}

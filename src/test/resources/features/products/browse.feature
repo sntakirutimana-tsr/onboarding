@@ -1,3 +1,4 @@
+@regression @smoke
 Feature: Browse products by category and store view
 
   Background:

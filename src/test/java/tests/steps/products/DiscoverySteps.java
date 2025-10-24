@@ -2,6 +2,7 @@ package tests.steps.products;
 
 import tests.steps.CommonSteps;
 
+import com.pages.product.components.PriceRangeFilter;
 import com.pages.product.SearchResultsPage;
 import com.pages.Page;
 import com.pages.product.ProductsPage;
@@ -47,7 +48,7 @@ public final class DiscoverySteps {
 
   @Then("a message ❝No products were found matching your selection.❞ should be displayed")
   public void message_no_products_were_found_should_be_displayed() {
-    assertTrue(((SearchResultsPage) RunContext.getPage())
+    assertTrue(((ProductsPage) RunContext.getPage())
       .hasNoProductFoundMessage()
     );
   }
@@ -65,7 +66,6 @@ public final class DiscoverySteps {
   @And("products should be sorted in {string} order")
   public void products_should_be_reordered_by(String criterion) {
     ProductsPage page = (ProductsPage) RunContext.getPage();
-
     assertTrue(page.isLoaded());
     assertTrue(page.sortBy().getSelectedText().toLowerCase().contains(criterion.toLowerCase()));
     assertTrue(page.areProductsSortedBy(criterion));
@@ -77,21 +77,31 @@ public final class DiscoverySteps {
     assertEquals("Default sorting", page.sortBy().getSelectedText());
   }
 
-  @When("a Customer sets the price range from {int} to {int}")
-  @And("sets the price range from {int} to {int}")
-  public void customer_sets_price_range_filter(int min, int max) {
+  @When("a Customer sets the price range from {double} to {double}")
+  @And("sets the price range from {double} to {double}")
+  public void customer_sets_price_range_filter(double min, double max) {
+    ((ProductsPage) RunContext.getPage()).priceRangeFilter()
+      .setRange(min, max);
   }
 
   @And("clicks the ❝FILTER❞ button")
   public void click_the_FILTER_button() {
+    Page page = ((ProductsPage) RunContext.getPage()).priceRangeFilter()
+      .applyFilter(RunContext.getPageName());
+    RunContext.setPage(page);
   }
 
-  @Then("only products within {int} to {int} should be displayed")
-  public void only_products_within_the_provided_price_range_should_be_displayed(int min, int max) {
-  }
+  @Then("only products within {double} to {double} should be displayed")
+  public void only_products_within_the_provided_price_range_should_be_displayed(double min, double max) {
+    int minPrice = (int) (Math.floor(min / 10) * 10);
+    int maxPrice = (int) (Math.ceil(max / 10) * 10);
 
-  @Then("the system should clamp the price range to stay within the allowed range of 10 to 150")
-  public void system_should_clamp_price_range_to_stay_within_allowed_range_of_10_to_150() {
+    ProductsPage page = (ProductsPage) RunContext.getPage();
+    PriceRangeFilter filter = page.priceRangeFilter(minPrice, maxPrice);
+
+    assertTrue(page.isLoaded(minPrice, maxPrice));
+    assertTrue(filter.hasPriceLabel(minPrice, maxPrice));
+    assertTrue(page.areAllProductsInPriceRange(min, max));
   }
 
   @When("a Customer selects sub-category as {string}")
