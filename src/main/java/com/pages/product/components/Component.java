@@ -15,7 +15,7 @@ import java.util.List;
 public abstract class Component extends Waits {
   @Getter
   private final WebDriver driver;
-  @Getter
+//  @Getter
   private final WebElement root;
 
   public Component(WebDriver driver, WebElement root) {
@@ -23,6 +23,16 @@ public abstract class Component extends Waits {
     this.driver = driver;
     this.root = root;
     this.initiateElements();
+  }
+
+  @Override
+  public WebDriver getDriver() {
+    return driver;
+  }
+
+//  @Override
+  public WebElement getRoot(){
+    return root;
   }
 
   public abstract void ensureAllCheckpointsAreReady();

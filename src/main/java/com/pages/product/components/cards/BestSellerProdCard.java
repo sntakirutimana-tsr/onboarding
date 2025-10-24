@@ -13,4 +13,6 @@ public final class BestSellerProdCard extends ProductCard {
   protected void initiateElements() {
     name = findElement(By.cssSelector("span.product-title"));
   }
+
+  
 }

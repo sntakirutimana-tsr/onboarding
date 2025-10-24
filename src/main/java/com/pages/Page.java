@@ -21,6 +21,11 @@ public abstract class Page extends Waits {
     PageFactory.initElements(driver, this);
   }
 
+  @Override
+  public WebDriver getDriver() {
+    return driver;
+  }
+
   public final boolean isLoaded() {
     return Executor.hasEvaluatedAndSucceed(this::prepareIsLoadedCheckpoints);
   }

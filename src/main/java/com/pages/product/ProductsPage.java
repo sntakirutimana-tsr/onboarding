@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public abstract class ProductsPage extends Page {
-  @Getter
+//  @Getter
   private final String headerText;
 
   @FindBy(css = "p.woocommerce-result-count")
@@ -27,6 +27,10 @@ public abstract class ProductsPage extends Page {
   public ProductsPage(String headerText, WebDriver driver) {
     super(driver);
     this.headerText = headerText;
+  }
+
+  public String getHeaderText() {
+    return headerText;
   }
 
   public static ProductsPage buildFor(String page, WebDriver driver) {
