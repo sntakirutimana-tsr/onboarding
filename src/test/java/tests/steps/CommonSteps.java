@@ -44,7 +44,7 @@ public final class CommonSteps {
     assertTrue(page.isLoaded());
     return page;
   }
-  
+
   @Given("Customer is on the checkout page")
   public void customerIsOnTheCheckoutPage() {
     WebDriver driver = DriverProvider.get();

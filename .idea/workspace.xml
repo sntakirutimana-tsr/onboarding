@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/AccessoriesProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/AccessoriesProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/MenProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/MenProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/WomenProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/WomenProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/OurBestSellers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/OurBestSellers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/PriceRangeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/PriceRangeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/DriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/DriverProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/runners/RunRegressionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/runners/RunSmokeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/add-to-cart.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/change-shipping-address.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/checkout-and-payment-process.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/customer_login.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/customer_registration.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login_validation.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/lost_password.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/products/browse.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/products/browse.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/review.feature" beforeDir="false" />
+    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Merge branch 'sprint/3-automation' of github.tsr:sntakirutimana-tsr/onboarding into sprint/3-automation&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,53 +33,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.All Features in: onboarding.executor": "Run",
-    "Cucumber Java.Feature: browse.executor": "Run",
-    "Cucumber Java.Feature: pagination.executor": "Run",
-    "Cucumber Java.Scenario: .executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°3.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°4.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°5.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°6.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°7.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by price range.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer searches a product by name.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°4.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria.executor": "Run",
-    "Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2 (1).executor": "Run",
-    "Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: System returns no products for unknown product name.executor": "Run",
-    "JUnit.RunRegressionTests.executor": "Run",
-    "JUnit.RunSmokeTests.executor": "Run",
-    "Maven.onboarding [clean].executor": "Run",
-    "Maven.onboarding [validate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sprint/3-automation",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/steve/Projects/onboarding",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.All Features in: onboarding.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°3.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°5.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°6.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°7.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer searches a product by name.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunRegressionTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunSmokeTests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.onboarding [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.onboarding [validate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/steve/Projects/onboarding&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pages.product" />
@@ -246,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761217881420</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'sprint/3-automation' of github.tsr:sntakirutimana-tsr/onboarding into sprint/3-automation&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1761339647105</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761339647105</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
