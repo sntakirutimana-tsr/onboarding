@@ -12,6 +12,7 @@ import java.util.List;
 @Slf4j
 public final class RunContext {
   private static final ThreadLocal<Page> page = new ThreadLocal<>();
+  private static final ThreadLocal<String> pageName = new ThreadLocal<>();
   private static final ThreadLocal<String> searchKeyword = new ThreadLocal<>();
   private static final ThreadLocal<List<String>> productNameList = new ThreadLocal<>();
 
@@ -23,8 +24,16 @@ public final class RunContext {
     return page.get();
   }
 
-  public static void setSearchKeyword(String name) {
-    searchKeyword.set(name);
+  public static void setPageName(String name) {
+    pageName.set(name);
+  }
+
+  public static String getPageName() {
+    return pageName.get();
+  }
+
+  public static void setSearchKeyword(String keyword) {
+    searchKeyword.set(keyword);
   }
 
   public static String getSearchKeyword() {
@@ -41,6 +50,7 @@ public final class RunContext {
 
   public static void clear() {
     page.remove();
+    pageName.remove();
     searchKeyword.remove();
     productNameList.remove();
   }

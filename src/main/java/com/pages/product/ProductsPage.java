@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 public abstract class ProductsPage extends Page {
   @Getter
@@ -41,6 +42,12 @@ public abstract class ProductsPage extends Page {
     return new PriceRangeFilter(driver, findElement(By.id("woocommerce_price_filter-3")), min, max);
   }
 
+  public List<String> productNameList() {
+    return productCardList().stream()
+      .map(RegularProdCard::getName)
+      .toList();
+  }
+
   List<WebElement> productList() {
     return getDriver().findElements(By.cssSelector("ul.products li"));
   }
@@ -49,6 +56,19 @@ public abstract class ProductsPage extends Page {
     return productList().stream()
       .map(r -> new RegularProdCard(getDriver(), r))
       .toList();
+  }
+
+  public boolean areProductsSortedBy(String criterion) {
+    List<RegularProdCard> products = productCardList();
+    return switch (criterion.toLowerCase()) {
+      case "average rating" -> IntStream.range(0, products.size() - 1)
+        .allMatch(i -> products.get(i).getRating() >= products.get(i + 1).getRating());
+      case "price: low to high" -> IntStream.range(0, products.size() - 1)
+        .allMatch(i -> products.get(i).getPrice() <= products.get(i + 1).getPrice());
+      case "price: high to low" -> IntStream.range(0, products.size() - 1)
+        .allMatch(i -> products.get(i).getPrice() >= products.get(i + 1).getPrice());
+      default -> throw new IllegalArgumentException("Unknown sorting criterion~" + criterion);
+    };
   }
 
   ExpectedCondition<Boolean> productListSizeCondition(int minSize) {
@@ -90,6 +110,10 @@ public abstract class ProductsPage extends Page {
     return new SearchByName(driver, findElement(By.id("woocommerce_product_search-1")));
   }
 
+  public SortBy sortBy() {
+    return new SortBy(driver, findElement(By.cssSelector("select[name='orderby']")));
+  }
+
   protected void prepareHeaderAndResultsCounterCheckpoints() {
     waitForVisibility(By.xpath(FormatUtils.f("//h1[text()='{}']", headerText)), 5);
     waitForVisibility(resultsCounter, 5);
@@ -98,7 +122,7 @@ public abstract class ProductsPage extends Page {
   @Override
   protected void prepareIsLoadedCheckpoints() {
     prepareHeaderAndResultsCounterCheckpoints();
-    new SortBy(driver, findElement(By.cssSelector("select[name='orderby']"))).ensureAllCheckpointsAreReady();
+    sortBy().ensureAllCheckpointsAreReady();
     searchByName().ensureAllCheckpointsAreReady();
     new SubCategoryFilter(driver, findElement(By.id("woocommerce_product_categories-3"))).ensureAllCheckpointsAreReady();
   }

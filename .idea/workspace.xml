@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SearchByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SearchByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/FormatUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/FormatUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" afterDir="false" />
     </list>
@@ -47,6 +51,10 @@
     "Cucumber Java.Scenario: Customer browses products by category or store page.executor": "Run",
     "Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor": "Run",
     "Cucumber Java.Scenario: Customer searches a product by name.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: System returns no products for unknown product name.executor": "Run",
     "Maven.onboarding [clean].executor": "Run",
     "Maven.onboarding [validate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -66,45 +74,7 @@
       <recent name="com.pages.product" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1">
-    <configuration name="Scenario: Customer browses products by category or store page -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature:14" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer browses products by category or store page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer browses products by category or store page$&quot; --name &quot;^Customer browses products by category or store page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer browses products by category or store page -  - Example n°1" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Customer browses products by category or store page -  - Example n°4" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature:17" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer browses products by category or store page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer browses products by category or store page$&quot; --name &quot;^Customer browses products by category or store page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer browses products by category or store page -  - Example n°4" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3">
     <configuration name="Scenario: Customer navigates through paginated results -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature:12" />
@@ -124,14 +94,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Customer sorts products by valid criteria -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:33" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: " />
+      <option name="NAME_FILTER" value="^Customer sorts products by valid criteria$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer sorts products by valid criteria$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer sorts products by valid criteria -  - Example n°1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Customer sorts products by valid criteria -  - Example n°2" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:34" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer sorts products by valid criteria$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer sorts products by valid criteria$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer sorts products by valid criteria -  - Example n°2" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Customer sorts products by valid criteria -  - Example n°3" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:35" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer sorts products by valid criteria$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer sorts products by valid criteria$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer sorts products by valid criteria -  - Example n°3" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: System rejects invalid sorting criterion -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:53" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^System rejects invalid sorting criterion$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^System rejects invalid sorting criterion$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: System rejects invalid sorting criterion -  - Example n°1" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -154,10 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3" />
+        <item itemvalue="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2" />
+        <item itemvalue="Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1" />
         <item itemvalue="Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1" />
-        <item itemvalue="Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4" />
-        <item itemvalue="Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1" />
-        <item itemvalue="Cucumber Java.Scenario: " />
       </list>
     </recent_temporary>
   </component>

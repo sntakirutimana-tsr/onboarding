@@ -12,6 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public final class DiscoverySteps {
@@ -19,6 +20,7 @@ public final class DiscoverySteps {
   @Given("a Customer is on {string} products page")
   public void customer_is_on_products_page(String pageName) {
     RunContext.setPage(CommonSteps.ensureProductPageIsAccessible(pageName));
+    RunContext.setPageName(pageName);
   }
 
   @When("a Customer enters search keyword as {string}")
@@ -39,9 +41,8 @@ public final class DiscoverySteps {
 
   @And("only products containing the {string} in their names should be displayed")
   public void only_products_whose_names_contain_the_keyword_should_be_displayed(String keyword) {
-    assertTrue(((SearchResultsPage) RunContext.getPage())
-      .hasOnlyProductsWhoseNamesContain(keyword.toLowerCase())
-    );
+    SearchResultsPage page = (SearchResultsPage) RunContext.getPage();
+    assertTrue(page.hasOnlyProductsWhoseNamesContain(keyword.toLowerCase()));
   }
 
   @Then("a message ❝No products were found matching your selection.❞ should be displayed")
@@ -52,21 +53,28 @@ public final class DiscoverySteps {
   }
 
   @When("a Customer sorts products by {string}")
+  @When("a Customer selects an invalid sorting criterion as {string}")
   @And("sorts products by {string}")
   public void customer_sorts_products_by(String criterion) {
+    ProductsPage current = (ProductsPage) RunContext.getPage();
+    Page page = current.sortBy().select(criterion, RunContext.getPageName());
+    RunContext.setPage(page);
   }
 
   @Then("the products should be re-arranged by {string}")
   @And("products should be sorted in {string} order")
   public void products_should_be_reordered_by(String criterion) {
-  }
+    ProductsPage page = (ProductsPage) RunContext.getPage();
 
-  @When("a Customer selects an invalid sorting criterion as {string}")
-  public void customer_selects_invalid_sorting_criterion_as(String criterion) {
+    assertTrue(page.isLoaded());
+    assertTrue(page.sortBy().getSelectedText().toLowerCase().contains(criterion.toLowerCase()));
+    assertTrue(page.areProductsSortedBy(criterion));
   }
 
   @Then("the system should ignore the invalid option, maintaining the default products order")
   public void system_should_ignore_invalid_option_maintaining_default_products_order() {
+    ProductsPage page = (ProductsPage) RunContext.getPage();
+    assertEquals("Default sorting", page.sortBy().getSelectedText());
   }
 
   @When("a Customer sets the price range from {int} to {int}")
