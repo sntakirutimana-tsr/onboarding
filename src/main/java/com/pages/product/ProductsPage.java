@@ -35,7 +35,19 @@ public abstract class ProductsPage extends Page {
       case "accessories" -> new AccessoriesProductsPage("Accessories", driver);
       case "men" -> new MenProductsPage("Men", driver);
       case "women" -> new WomenProductsPage("Women", driver);
-      default -> new StorePage("Store", driver);
+      case "store" -> new StorePage("Store", driver);
+      default -> new ProductsPage(pageName, driver) {
+        @Override
+        public PriceRangeFilter priceRangeFilter() {
+          return priceRangeFilter(10, 150);
+        }
+
+        @Override
+        public boolean hasProductList() {
+          return Executor.hasEvaluatedAndSucceed(() ->
+            waitFor(productListSizeCondition(1), 5));
+        }
+      };
     };
   }
 
@@ -76,7 +88,7 @@ public abstract class ProductsPage extends Page {
       });
   }
 
-  ExpectedCondition<Boolean> productListSizeCondition(int minSize) {
+  protected ExpectedCondition<Boolean> productListSizeCondition(int minSize) {
     return new ExpectedCondition<>() {
       @Override
       public Boolean apply(WebDriver driver) {
@@ -91,7 +103,7 @@ public abstract class ProductsPage extends Page {
     };
   }
 
-  public final boolean hasProductList() {
+  public boolean hasProductList() {
     return Executor.hasEvaluatedAndSucceed(() -> waitFor(productListSizeCondition(3), 5));
   }
 
@@ -131,8 +143,12 @@ public abstract class ProductsPage extends Page {
     return new SortBy(driver, findElement(By.cssSelector("select[name='orderby']")));
   }
 
+  public SubCategoryFilter subCategoryFilter() {
+    return new SubCategoryFilter(driver, findElement(By.id("woocommerce_product_categories-3")));
+  }
+
   protected void prepareHeaderAndResultsCounterCheckpoints() {
-    waitForVisibility(By.xpath(FormatUtils.f("//h1[text()='{}']", headerText)), 10);
+    waitForVisibility(By.xpath(FormatUtils.f("//h1[text()=\"{}\"]", headerText)), 10);
     waitForVisibility(resultsCounter, 5);
   }
 
@@ -144,7 +160,7 @@ public abstract class ProductsPage extends Page {
     prepareHeaderAndResultsCounterCheckpoints();
     sortBy().ensureAllCheckpointsAreReady();
     searchByName().ensureAllCheckpointsAreReady();
-    new SubCategoryFilter(driver, findElement(By.id("woocommerce_product_categories-3"))).ensureAllCheckpointsAreReady();
+    subCategoryFilter().ensureAllCheckpointsAreReady();
   }
 
   protected final void prepareIsLoadedCheckpoints(int minPrice, int maxPrice) {
@@ -154,6 +170,11 @@ public abstract class ProductsPage extends Page {
 
   @Override
   protected void prepareIsLoadedCheckpoints() {
-    prepareCheckpoints();
+    try {
+      prepareCheckpoints();
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+      throw new AssertionError(e);
+    }
   }
 }

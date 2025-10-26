@@ -95,21 +95,22 @@ Feature: Product discovery by search, filtering, and sorting
   Scenario Outline: Customer filters products by valid sub-category
     Given a Customer is on "store" products page
     When a Customer selects sub-category as "<category>"
-    Then only products in the "<category>" sub-category should be displayed
+    Then a message "<results_message>" should be displayed
+    And a list of products should be displayed, each showing an image, name, category as "<category>", rating as stars, and price
 
     Examples:
-      | category            |
-      | Men's Shirts        |
-      | Men's Shoes         |
-      | Men's Jeans         |
-      | Women's Shirts      |
-      | Women's Shoes       |
-      | Women's Jeans       |
-      | Purses And Handbags |
+      | category            | results_message           |
+      | Men’s Shirts        | Showing the single result |
+      | Men’s Shoes         | Showing the single result |
+      | Men’s Jeans         | Showing all 4 results     |
+      | Women’s Shirts      | Showing the single result |
+      | Women’s Shoes       | Showing the single result |
+      | Women’s Jeans       | Showing all 2 results     |
+      | Purses And Handbags | Showing the single result |
 
   Scenario Outline: System rejects invalid category filter
     Given a Customer is on "<page_name>" products page
-    When a Customer selects sub-category as "<sub_category>"
+    When a Customer selects invalid sub-category as "<sub_category>"
     Then the list of products should remain unchanged
 
     Examples:
@@ -119,8 +120,7 @@ Feature: Product discovery by search, filtering, and sorting
   Scenario Outline: Customer refines product discovery by combining filters and sorters
     Given a Customer is on "store" products page
     When a Customer selects sub-category as "<category>"
-    And sets the price range from <min_price> to <max_price>
-    And clicks the ❝FILTER❞ button
+    And filters the results to show items priced from <min_price> to <max_price>
     And sorts products by "<sort_order>"
     Then only products in "<category>" within the price range of <min_price> to <max_price> should be displayed
     And products should be sorted in "<sort_order>" order

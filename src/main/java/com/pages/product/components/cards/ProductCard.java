@@ -12,19 +12,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import static com.utils.FormatUtils.extractFormattedCategories;
+
 public abstract class ProductCard extends Component {
   protected WebElement name;
 
   public ProductCard(WebDriver driver, WebElement root) {
     super(driver, root);
-  }
-
-  WebElement addToCartButton() {
-    return findElement(By.xpath("//button[@type='submit' and text()='Add to cart']"));
-  }
-
-  WebElement categoryTag() {
-    return findElement(By.cssSelector("span.ast-woo-product-category"));
   }
 
   List<WebElement> priceTags() {
@@ -55,9 +49,11 @@ public abstract class ProductCard extends Component {
   }
 
   boolean hasCategory(String expectedCategory) {
-    String actualCategory = getText(categoryTag()).toLowerCase();
-    return Arrays.stream(expectedCategory.replaceAll(" ", "").split(","))
-      .anyMatch(c -> actualCategory.startsWith(c.toLowerCase()));
+    List<String> actualCategories = extractFormattedCategories(getRoot().getAttribute("class"));
+    return Arrays.stream(expectedCategory.split(","))
+      .map(String::trim)
+      .map(String::toLowerCase)
+      .anyMatch(actualCategories::contains);
   }
 
   public double getRating() {
@@ -89,6 +85,8 @@ public abstract class ProductCard extends Component {
   public void ensureAllCheckpointsAreReady(String category) {
     ensureAllCheckpointsAreReady();
     Executor.raiseIf(() -> hasCategory(category));
-    Executor.raiseIf(() -> addToCartButton() != null, "Must have the ❝ADD TO CARD❞ button");
+    Executor.raiseIf(() ->
+        findElement(By.xpath("//a[text()='Add to cart']")).isDisplayed(),
+      "Must have the ❝ADD TO CARD❞ button");
   }
 }
