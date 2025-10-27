@@ -3,7 +3,6 @@ package com.pages.product.components;
 import com.pages.Page;
 import com.pages.product.ProductsPage;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
