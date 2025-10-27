@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/CommonSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/checkout/PaymentMethodSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/checkout/PaymentMethodSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +23,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Odile-Uwimpuhwe"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Odile-Uwimpuhwe&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sntakirutimana-tsr/onboarding.git",
+    "accountId": "7863f1cf-8c29-4a24-a749-7906efd804de"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -40,37 +46,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: browse.executor": "Run",
-    "Cucumber Java.Feature: pagination.executor": "Run",
-    "Cucumber Java.Feature: payment-method.executor": "Run",
-    "Cucumber Java.Feature: place-order.executor": "Run",
-    "Cucumber Java.Scenario: .executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page.executor": "Run",
-    "Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer place an order with valid billing details - @regression,... - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer searches a product by name.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: System returns no products for unknown product name.executor": "Run",
-    "Maven.onboarding [clean].executor": "Run",
-    "Maven.onboarding [validate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sprint/3-automation",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/TestSolutions/Documents/testsolutions/onboarding/src/test/java/tests/steps/checkout",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: payment-method.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: place-order.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer place an order with valid billing details - @regression,... - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer searches a product by name.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.onboarding [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.onboarding [validate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TestSolutions/Documents/testsolutions/onboarding/src/test/java/tests/steps/checkout&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TestSolutions\Documents\testsolutions\onboarding\src\test\java\tests\steps\checkout" />
@@ -220,6 +226,17 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />
     <MESSAGE value="Fix issues with pagination.feature" />
@@ -233,134 +250,41 @@
           <line>27</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>11</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>9</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>8</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>10</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>13</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>14</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>15</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>16</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>17</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>18</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>19</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>20</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>21</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
-          <line>22</line>
-          <option name="timeStamp" value="34" />
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
           <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="138" />
+          <line>44</line>
+          <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
           <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="139" />
+          <line>83</line>
+          <option name="timeStamp" value="170" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
           <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="140" />
+          <line>78</line>
+          <option name="timeStamp" value="171" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
           <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="141" />
+          <line>54</line>
+          <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
           <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="143" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>135</line>
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
-          <line>143</line>
-          <option name="timeStamp" value="146" />
+          <line>62</line>
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

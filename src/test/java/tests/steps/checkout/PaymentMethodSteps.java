@@ -32,6 +32,8 @@ public class PaymentMethodSteps {
 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+    // wait until the overlay is invisible
+    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".blockUI.blockOverlay")));
     // Retry once in case of stale reference
     for (int attempt = 0; attempt < 2; attempt++) {
       try {
