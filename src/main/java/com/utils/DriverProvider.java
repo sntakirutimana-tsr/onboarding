@@ -57,7 +57,7 @@ public final class DriverProvider {
     // Default browser options
     ChromeOptions options = new ChromeOptions();
 
-    options.addArguments("--headless=new");
+//    options.addArguments("--headless=new");
     options.addArguments("--window-size=1920,1080");
     options.addArguments(
       "--user-data-dir=/tmp/chrome-profile-" +
