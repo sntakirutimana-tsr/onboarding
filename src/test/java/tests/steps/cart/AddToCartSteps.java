@@ -1,6 +1,8 @@
 package tests.steps.cart;
 
+import com.pages.product.ProductsPage;
 import com.utils.RunContext;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,6 +25,7 @@ public class AddToCartSteps {
   private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   private int previousCartCounter = 0;
 
+
   @Given("Customer is on {string}")
   public void customerIsOn(String pageName) {
     Homepage home = (Homepage) CommonSteps.ensureHomepageIsAccessible();
@@ -43,11 +46,7 @@ public class AddToCartSteps {
       System.out.println("DEBUG: Cart counter element not readable, assuming previous count was 0.");
     }
 
-    // Try to find an add-to-cart link/button associated with the product name.
-    By addToCartButton = By.xpath(
-      "//a[contains(@aria-label, '" + productName + "') and (contains(translate(., 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'ADD TO CART'))]"
-    );
-
+    By addToCartButton = By.xpath("//a[contains(@aria-label, '" + productName + "')]");
     WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
     button.click();
     System.out.println("DEBUG: Clicked ADD TO CART for " + productName);
@@ -57,7 +56,7 @@ public class AddToCartSteps {
   public void aViewCartLinkAppears(String linkText, String productName) {
     By viewCartLinkLocator = By.cssSelector("a[title='View cart']");
     try {
-      System.out.println("DEBUG: Looking for 'View cart' link with locator: " + viewCartLinkLocator);
+      System.out.println("DEBUG: Looking for 'View cart' link with XPath: " + viewCartLinkLocator);
 
       wait.until(ExpectedConditions.visibilityOfElementLocated(viewCartLinkLocator));
       WebElement viewCartLink = driver.findElement(viewCartLinkLocator);
@@ -78,29 +77,32 @@ public class AddToCartSteps {
 
   @And("cart counter increments by {int}")
   public void andCartCounterIncrementsBy(int increment) {
-    // Locate the cart counter element using a couple of likely selectors
-    By cartCounterLocator = By.cssSelector(".ast-cart-menu-wrap .count, #ast-site-header-cart .count");
 
+
+    By cartCounterLocator = By.cssSelector(".ast-cart-menu-wrap .count");
+
+// Example usage remains the same
     int expectedNewCount = previousCartCounter + increment;
 
-    // Wait for the counter to update its text
+    // 2. Wait for the counter to update its text
     wait.until(ExpectedConditions.textToBe(cartCounterLocator, String.valueOf(expectedNewCount)));
 
-    // Read the new count and verify
+    // 3. Read the new count and verify
     WebElement counterElement = driver.findElement(cartCounterLocator);
     String newCountText = counterElement.getText().trim();
-    int newCartCounter = newCountText.isEmpty() ? 0 : Integer.parseInt(newCountText.replaceAll("[^0-9]", ""));
+    int newCartCounter = newCountText.isEmpty() ? 0 : Integer.parseInt(newCountText);
 
     Assert.assertEquals(
       "Cart counter did not increment correctly. Expected: " + expectedNewCount + ", Actual: " + newCartCounter,
       expectedNewCount,
       newCartCounter
     );
-    System.out.println("DEBUG: Cart counter successfully verified. New count: " + newCartCounter);
+
   }
 
   @And("the {string} should be in the cart with {string}, {string}, and {string}")
   public void theShouldBeInTheCartWithAnd(String productName, String price, String quantity, String subtotal) {
+
 
     By viewCartLinkLocator = By.cssSelector("a[title='View cart']");
 
@@ -109,49 +111,32 @@ public class AddToCartSteps {
     link.click();
 
     // Wait for the Cart page to load
-    wait.until(ExpectedConditions.or(
-      ExpectedConditions.titleContains("Cart"),
-      ExpectedConditions.urlContains("/cart")
-    ));
+    wait.until(ExpectedConditions.titleContains("Cart"));
     System.out.println("DEBUG: Navigated to the Cart page via embedded click.");
 
-    // Locate the product row for the given product name
-    By productRowLocator = By.xpath("//td[@class='product-name']/a[normalize-space()='" + productName + "']/ancestor::tr");
 
-    WebElement productRow = wait.until(ExpectedConditions.visibilityOfElementLocated(productRowLocator));
 
-    // Price (scoped to row)
-    WebElement priceElement;
-    try {
-      priceElement = productRow.findElement(By.cssSelector(".product-price .woocommerce-Price-amount.amount, .product-price .amount, .woocommerce-Price-amount.amount"));
-    } catch (Exception e) {
-      Assert.fail("Price element not found in cart row for product: " + productName);
-      return;
-    }
+    By productRowLocator = By.xpath("//td[@class='product-name']/a[text()='" + productName + "']");
+
+
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(productRowLocator));
+    WebElement productRow = driver.findElement(By.xpath("//td[@class='product-name']/a[text()='" + productName + "']/ancestor::tr"));
+
+// Now, use the CSS Selector to find the price *within* that row
+    WebElement priceElement = productRow.findElement(By.cssSelector(".product-price .woocommerce-Price-amount.amount"));
     String actualPrice = priceElement.getText().trim();
-    Assert.assertEquals("Price mismatch in cart.", price.trim(), actualPrice);
+    Assert.assertEquals("Price mismatch in cart.", price, actualPrice);
 
-    // Quantity (scoped to row)
-    String actualQuantity;
-    try {
-      WebElement qtyInput = productRow.findElement(By.cssSelector("td.product-quantity input, .product-quantity input"));
-      actualQuantity = qtyInput.getAttribute("value");
-    } catch (Exception e) {
-      Assert.fail("Quantity input not found in cart row for product: " + productName);
-      return;
-    }
-    Assert.assertEquals("Quantity mismatch in cart.", quantity.trim(), actualQuantity.trim());
 
-    // Subtotal (scoped to row)
-    String actualSubtotal;
-    try {
-      WebElement subtotalEl = productRow.findElement(By.cssSelector(".product-subtotal .woocommerce-Price-amount.amount, .product-subtotal .amount"));
-      actualSubtotal = subtotalEl.getText().trim();
-    } catch (Exception e) {
-      Assert.fail("Subtotal element not found in cart row for product: " + productName);
-      return;
-    }
-    Assert.assertEquals("Subtotal mismatch in cart.", subtotal.trim(), actualSubtotal);
+    String actualQuantity = driver.findElement(By.xpath("//td[@class='product-quantity']//input")).getAttribute("value");
+
+    Assert.assertEquals("Quantity mismatch in cart.", quantity, actualQuantity);
+
+    // 5. Verify Subtotal
+    String subtotalPath = ".//td[@class='product-subtotal']//span[@class='woocommerce-Price-amount amount']";
+    String actualSubtotal = driver.findElement(By.xpath(subtotalPath)).getText().trim();
+    Assert.assertEquals("Subtotal mismatch in cart.", subtotal, actualSubtotal);
 
     System.out.println("DEBUG: All product details verified for " + productName + " in the cart.");
   }

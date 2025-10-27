@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Refactor common steps file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/cart/AddToCartSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/cart/AddToCartSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/addToCart/addToCart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cart/addToCart.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +41,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Cucumber Java.All Features in: onboarding.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: addToCart (1).executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: addToCart.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
@@ -82,7 +85,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;remotes/origin/sprint/3-automation&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;automation-cart&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/steve/Projects/onboarding&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -95,7 +98,25 @@
       <recent name="com.pages.product" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: addToCart">
+  <component name="RunManager" selected="Cucumber Java.Feature: addToCart (1)">
+    <configuration name="Feature: addToCart (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cart/addToCart.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: addToCart" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: addToCart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/addToCart/addToCart.feature" />
@@ -117,25 +138,6 @@
     <configuration name="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:130" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer refines product discovery by combining filters and sorters$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer refines product discovery by combining filters and sorters$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:131" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
       <option name="NAME_FILTER" value="^Customer refines product discovery by combining filters and sorters$" />
@@ -197,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: addToCart (1)" />
         <item itemvalue="Cucumber Java.Feature: addToCart" />
         <item itemvalue="JUnit.RunRegressionTests" />
         <item itemvalue="Cucumber Java.Scenario: System rejects invalid category filter -  - Example n°1" />
         <item itemvalue="Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1)" />
-        <item itemvalue="Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" />
       </list>
     </recent_temporary>
   </component>
