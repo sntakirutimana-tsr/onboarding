@@ -40,7 +40,6 @@ public final class DriverProvider {
       default -> throw new RuntimeException("Unknown browser~" + browser);
     };
     log.info("✅ {} webdriver initiated successfully", browser);
-    webDriver.manage().window().maximize();
     driver.set(webDriver);
     return webDriver;
   }
@@ -58,6 +57,8 @@ public final class DriverProvider {
     // Default browser options
     ChromeOptions options = new ChromeOptions();
 
+    options.addArguments("--headless=new");
+    options.addArguments("--window-size=1920,1080");
     options.addArguments(
       "--user-data-dir=/tmp/chrome-profile-" +
         Thread.currentThread().getId() + "-" +
@@ -85,6 +86,8 @@ public final class DriverProvider {
     FirefoxProfile profile = new FirefoxProfile();
 
     profile.setPreference("browser.privatebrowsing.autostart", true);
+    options.addArguments("--headless");
+    options.addArguments("--window-size=1920,1080");
     options.setProfile(profile);
 
     // Setup browser driver automatically
@@ -98,6 +101,8 @@ public final class DriverProvider {
     // Default browser options
     EdgeOptions options = new EdgeOptions();
 
+    options.addArguments("--headless=new");
+    options.addArguments("--window-size=1920,1080");
     options.addArguments(
       "--user-data-dir=/tmp/edge-profile-" +
         Thread.currentThread().getId() + "-" +

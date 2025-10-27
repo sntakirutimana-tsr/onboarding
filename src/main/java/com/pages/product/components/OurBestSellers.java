@@ -24,7 +24,7 @@ public final class OurBestSellers extends Component {
 
   @Override
   public void ensureAllCheckpointsAreReady() {
-    hasElement(By.xpath("//h2[text()='Our Best Sellers']"));
+    ensureExistenceOfElement(By.xpath("//h2[text()='Our Best Sellers']"));
     Executor.raiseIf(() -> productCardList.size() == 3, "Our Best Sellers must have three products");
     productCardList.stream()
       .map(r -> new BestSellerProdCard(getDriver(), r))

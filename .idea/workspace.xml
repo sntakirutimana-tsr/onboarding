@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
@@ -15,6 +16,17 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/runners/RunRegressionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/runners/RunSmokeTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/review.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/review.feature" afterDir="false" />
+=======
+    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Refactor common steps file">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/checkout/PaymentMethodSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/checkout/PaymentMethodSteps.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/DriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/DriverProvider.java" afterDir="false" />
+>>>>>>> cfc5d15fe8c506190f8f28d7f43bec470831bcdf
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +43,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Odile-Uwimpuhwe&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sntakirutimana-tsr/onboarding.git",
+    "accountId": "7863f1cf-8c29-4a24-a749-7906efd804de"
+  }
+}]]></component>
+=======
+>>>>>>> cfc5d15fe8c506190f8f28d7f43bec470831bcdf
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
+  <component name="ProjectCucumberState">
+    <option name="sourcePathOnly" value="false" />
+  </component>
   <component name="ProjectId" id="34Sn1yHmPaer1sNk3dFIcwrK5Mp" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -44,29 +74,85 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< HEAD
     &quot;Cucumber Java.Feature: add-to-cart.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: review.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Feature: view-product-details.executor&quot;: &quot;Run&quot;,
+=======
+<<<<<<< HEAD
+    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: payment-method.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: place-order.executor&quot;: &quot;Run&quot;,
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
     &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
+=======
+    &quot;Cucumber Java.Scenario: Customer place an order with valid billing details - @regression,... - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer searches a product by name.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
+=======
+    &quot;Cucumber Java.All Features in: onboarding.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°3.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°5.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°6.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°7.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by price range.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by valid sub-category -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer filters products by valid sub-category -  - Example n°7.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1.executor&quot;: &quot;Run&quot;,
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
     &quot;Cucumber Java.Scenario: Customer searches a product by name.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
     &quot;Cucumber Java.Scenario: System Redirects to product details page and displays product information correctly.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
+=======
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System rejects invalid category filter -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunRegressionTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunSmokeTests.executor&quot;: &quot;Run&quot;,
+>>>>>>> cfc5d15fe8c506190f8f28d7f43bec470831bcdf
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
     &quot;Maven.onboarding [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.onboarding [validate].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+<<<<<<< HEAD
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
@@ -83,6 +169,18 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+    &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+<<<<<<< HEAD
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TestSolutions/Documents/testsolutions/onboarding/src/test/java/tests/steps/checkout&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;/home/steve/Projects/onboarding&quot;,
+>>>>>>> cfc5d15fe8c506190f8f28d7f43bec470831bcdf
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
   }
 }</component>
   <component name="RecentsManager">
@@ -95,6 +193,7 @@
       <recent name="com.pages.product" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Cucumber Java.Scenario: Customer submits a review with valid inputs -  - Example n°1">
     <configuration name="Feature: browse" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
@@ -103,6 +202,17 @@
       <module name="onboarding" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
       <option name="SUGGESTED_NAME" value="Feature: browse" />
+=======
+  <component name="RunManager" selected="JUnit.RunRegressionTests">
+    <configuration name="Scenario: Customer browses products by category or store page -  - Example n°2" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature:16" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer browses products by category or store page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer browses products by category or store page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer browses products by category or store page -  - Example n°2" />
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -114,6 +224,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Feature: review" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature" />
@@ -121,6 +232,16 @@
       <module name="onboarding" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
       <option name="SUGGESTED_NAME" value="Feature: review" />
+=======
+    <configuration name="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:130" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer refines product discovery by combining filters and sorters$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer refines product discovery by combining filters and sorters$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" />
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -132,6 +253,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Feature: view-product-details" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/view-product-details.feature" />
@@ -139,6 +261,16 @@
       <module name="onboarding" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
       <option name="SUGGESTED_NAME" value="Feature: view-product-details" />
+=======
+    <configuration name="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:131" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^Customer refines product discovery by combining filters and sorters$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer refines product discovery by combining filters and sorters$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" />
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -150,6 +282,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Scenario: Customer submits a review with valid inputs -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature:17" />
@@ -158,6 +291,16 @@
       <option name="NAME_FILTER" value="^Customer submits a review with valid inputs$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer submits a review with valid inputs$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: Customer submits a review with valid inputs -  - Example n°1" />
+=======
+    <configuration name="Scenario: System rejects invalid category filter -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:118" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="onboarding" />
+      <option name="NAME_FILTER" value="^System rejects invalid category filter$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^System rejects invalid category filter$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: System rejects invalid category filter -  - Example n°1" />
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -169,6 +312,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Scenario: System Redirects to product details page and displays product information correctly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/view-product-details.feature" />
@@ -178,12 +322,19 @@
       <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^System Redirects to product details page and displays product information correctly$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: System Redirects to product details page and displays product information correctly" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+=======
+    <configuration name="RunRegressionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="onboarding" />
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="tests.runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="tests.runners" />
+      <option name="MAIN_CLASS_NAME" value="tests.runners.RunRegressionTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,11 +350,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Cucumber Java.Scenario: Customer submits a review with valid inputs -  - Example n°1" />
         <item itemvalue="Cucumber Java.Feature: review" />
         <item itemvalue="Cucumber Java.Feature: view-product-details" />
         <item itemvalue="Cucumber Java.Scenario: System Redirects to product details page and displays product information correctly" />
         <item itemvalue="Cucumber Java.Feature: browse" />
+=======
+        <item itemvalue="JUnit.RunRegressionTests" />
+        <item itemvalue="Cucumber Java.Scenario: System rejects invalid category filter -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1)" />
+        <item itemvalue="Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°2" />
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
       </list>
     </recent_temporary>
   </component>
@@ -240,15 +399,96 @@
       <option name="project" value="LOCAL" />
       <updated>1761217881420</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'sprint/3-automation' of github.tsr:sntakirutimana-tsr/onboarding into sprint/3-automation&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1761339647105</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761339647105</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor common steps file">
+      <option name="closed" value="true" />
+      <created>1761339989541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761339989541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> e431b7714c2b31ac92cc24e267f7e8c8619bfa50
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />
     <MESSAGE value="Fix issues with pagination.feature" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="Fix issues with pagination.feature" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="tzatziki.gherkin.step.example">
+          <url>file://$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/CheckoutPaymentSteps.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+=======
+    <MESSAGE value="Refactor common steps file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor common steps file" />
+>>>>>>> cfc5d15fe8c506190f8f28d7f43bec470831bcdf
   </component>
 </project>
