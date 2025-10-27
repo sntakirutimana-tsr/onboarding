@@ -12,4 +12,6 @@ public interface Waitable extends Drivable {
   void waitForVisibility(By locator, int timeoutInSecs);
 
   void waitForVisibility(WebElement element, int timeoutInSecs);
+
+  void waitForDisappearance(WebElement element, int timeoutInSec);
 }

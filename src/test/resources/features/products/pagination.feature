@@ -1,3 +1,4 @@
+@regression
 Feature: Browse product results with pagination
 
   Scenario Outline: Customer navigates forward through paginated results

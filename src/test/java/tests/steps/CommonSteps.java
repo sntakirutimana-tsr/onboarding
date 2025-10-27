@@ -7,6 +7,7 @@ import com.utils.DriverProvider;
 import com.utils.RunContext;
 
 import io.cucumber.java.en.Given;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,7 +44,6 @@ public final class CommonSteps {
     assertTrue(page.isLoaded());
     return page;
   }
-
 
   @Given("Customer is on the checkout page")
   public void customerIsOnTheCheckoutPage() {

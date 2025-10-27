@@ -3,7 +3,7 @@ name: BDD Automation
 on:
   push:
     branches:
-      - 'sprints/3-*'
+      - 'sprint/*-automation'
     paths-ignore:
       - '.github/badges/**'
 

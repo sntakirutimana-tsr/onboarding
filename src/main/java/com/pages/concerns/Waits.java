@@ -18,6 +18,11 @@ public abstract class Waits implements Waitable {
   }
 
   @Override
+  public void waitForDisappearance(WebElement element, int timeoutInSec) {
+    wait(timeoutInSec).until(ExpectedConditions.invisibilityOf(element));
+  }
+
+  @Override
   public void waitForElementToBeInteractive(WebElement element, int timeoutInSec) {
     wait(timeoutInSec).until(ExpectedConditions.elementToBeClickable(element));
   }

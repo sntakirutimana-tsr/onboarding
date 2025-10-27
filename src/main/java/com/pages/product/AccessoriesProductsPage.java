@@ -1,5 +1,7 @@
 package com.pages.product;
 
+import com.pages.product.components.PriceRangeFilter;
+
 import org.openqa.selenium.WebDriver;
 
 public final class AccessoriesProductsPage extends ProductsPage {
@@ -8,8 +10,13 @@ public final class AccessoriesProductsPage extends ProductsPage {
   }
 
   @Override
+  public PriceRangeFilter priceRangeFilter() {
+    return priceRangeFilter(10, 80);
+  }
+
+  @Override
   public void prepareIsLoadedCheckpoints() {
     super.prepareIsLoadedCheckpoints();
-    priceRangeFilter(10, 80).ensureAllCheckpointsAreReady();
+    priceRangeFilter().ensureAllCheckpointsAreReady();
   }
 }

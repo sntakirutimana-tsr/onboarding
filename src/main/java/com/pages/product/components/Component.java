@@ -1,6 +1,6 @@
 package com.pages.product.components;
 
-import com.pages.concerns.Waits;
+import com.pages.concerns.Actionable;
 import com.utils.Executor;
 
 import org.openqa.selenium.By;
@@ -12,7 +12,7 @@ import lombok.Getter;
 import java.lang.reflect.Proxy;
 import java.util.List;
 
-public abstract class Component extends Waits {
+public abstract class Component extends Actionable {
   @Getter
   private final WebDriver driver;
   @Getter
@@ -49,11 +49,11 @@ public abstract class Component extends Waits {
     return getRoot().findElements(by);
   }
 
-  protected void hasElement(By by) {
+  protected void ensureExistenceOfElement(By by) {
     Executor.raiseIf(() -> findElement(by).isDisplayed(), "No element found for locator: " + by);
   }
 
-  protected void hasElement(WebElement element) {
+  protected void ensureExistenceOfElement(WebElement element) {
     Executor.raiseIf(() -> element != null && element.isDisplayed());
   }
 }
