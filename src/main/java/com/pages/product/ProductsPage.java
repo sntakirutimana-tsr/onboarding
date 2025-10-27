@@ -52,7 +52,7 @@ public abstract class ProductsPage extends Page {
     return getDriver().findElements(By.cssSelector("ul.products li"));
   }
 
-  protected List<RegularProdCard> productCardList() {
+  public List<RegularProdCard> productCardList() {
     return productList().stream()
       .map(r -> new RegularProdCard(getDriver(), r))
       .toList();

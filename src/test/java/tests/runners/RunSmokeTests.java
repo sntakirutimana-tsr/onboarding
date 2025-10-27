@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
     "html:target/cucumber-reports.html",
     "junit:target/cucumber.xml"
   },
-  monochrome = true,
+  //monochrome = true,
   dryRun = true,
   tags = "@smoke"
 )

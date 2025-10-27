@@ -25,7 +25,7 @@ public class CommonHooks {
     if (webDriver != null) {
       try {
         webDriver.manage().deleteAllCookies();
-        webDriver.quit();
+        //webDriver.quit();
       } catch (Exception e) {
         log.error("Error during driver cleanup: {}", e.getMessage());
       } finally {

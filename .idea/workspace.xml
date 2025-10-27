@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Fix issues with pagination.feature">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/StorePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/SortBy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/product/components/cards/ProductCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/FormatUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/FormatUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/RunContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/products/DiscoverySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/hooks/CommonHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/hooks/CommonHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/runners/RunRegressionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/runners/RunSmokeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/review.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/review.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,48 +42,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: browse.executor": "Run",
-    "Cucumber Java.Feature: pagination.executor": "Run",
-    "Cucumber Java.Scenario: .executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor": "Run",
-    "Cucumber Java.Scenario: Customer browses products by category or store page.executor": "Run",
-    "Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer searches a product by name.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor": "Run",
-    "Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: System returns no products for unknown product name.executor": "Run",
-    "Maven.onboarding [clean].executor": "Run",
-    "Maven.onboarding [validate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sprint/3-automation",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/steve/Projects/onboarding",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: add-to-cart.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: review.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: view-product-details.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer searches a product by name.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System Redirects to product details page and displays product information correctly.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.onboarding [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.onboarding [validate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sprint/3-automation&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/steve/Projects/onboarding&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TestSolutions\Downloads\onboarding\src\test\resources\features" />
+      <recent name="C:\Users\TestSolutions\Downloads\onboarding\src\test\java\tests\steps\products" />
+      <recent name="C:\Users\TestSolutions\Downloads\onboarding\src\test\resources\features\products" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pages.product" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3">
-    <configuration name="Scenario: Customer navigates through paginated results -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Customer submits a review with valid inputs -  - Example n°1">
+    <configuration name="Feature: browse" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/pagination.feature:12" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/browse.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer navigates through paginated results$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer navigates through paginated results$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer navigates through paginated results -  - Example n°1" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: browse" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -94,14 +114,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Customer sorts products by valid criteria -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: review" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:33" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer sorts products by valid criteria$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer sorts products by valid criteria$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer sorts products by valid criteria -  - Example n°1" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: review" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Customer sorts products by valid criteria -  - Example n°2" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: view-product-details" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:34" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/view-product-details.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer sorts products by valid criteria$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer sorts products by valid criteria$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer sorts products by valid criteria -  - Example n°2" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: view-product-details" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -132,14 +150,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Customer sorts products by valid criteria -  - Example n°3" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Customer submits a review with valid inputs -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:35" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature:17" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer sorts products by valid criteria$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer sorts products by valid criteria$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer sorts products by valid criteria -  - Example n°3" />
+      <option name="NAME_FILTER" value="^Customer submits a review with valid inputs$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer submits a review with valid inputs$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Customer submits a review with valid inputs -  - Example n°1" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -151,14 +169,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: System rejects invalid sorting criterion -  - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: System Redirects to product details page and displays product information correctly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/products/discovery.feature:53" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/view-product-details.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^System rejects invalid sorting criterion$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^System rejects invalid sorting criterion$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: System rejects invalid sorting criterion -  - Example n°1" />
+      <option name="NAME_FILTER" value="^System Redirects to product details page and displays product information correctly$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^System Redirects to product details page and displays product information correctly$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: System Redirects to product details page and displays product information correctly" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -181,13 +199,21 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3" />
-        <item itemvalue="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2" />
-        <item itemvalue="Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1" />
-        <item itemvalue="Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1" />
-        <item itemvalue="Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Scenario: Customer submits a review with valid inputs -  - Example n°1" />
+        <item itemvalue="Cucumber Java.Feature: review" />
+        <item itemvalue="Cucumber Java.Feature: view-product-details" />
+        <item itemvalue="Cucumber Java.Scenario: System Redirects to product details page and displays product information correctly" />
+        <item itemvalue="Cucumber Java.Feature: browse" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add complete logic for homepage">
@@ -204,6 +230,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761215632224</updated>
+      <workItem from="1761292165154" duration="33183000" />
     </task>
     <task id="LOCAL-00002" summary="Fix issues with pagination.feature">
       <option name="closed" value="true" />
@@ -215,6 +242,9 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />

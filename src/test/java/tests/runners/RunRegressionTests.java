@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
     "html:target/cucumber-reports.html",
     "junit:target/cucumber.xml"
   },
-  monochrome = true,
+  //monochrome = true,
   dryRun = true,
   tags = "@regression"
 )

@@ -23,7 +23,7 @@ public abstract class Page extends Waits {
     return Executor.hasEvaluatedAndSucceed(this::prepareIsLoadedCheckpoints);
   }
 
-  protected WebElement findElement(By by) {
+  public WebElement findElement(By by) {
     return getDriver().findElement(by);
   }
 
