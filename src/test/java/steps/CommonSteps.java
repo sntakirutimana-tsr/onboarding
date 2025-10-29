@@ -1,4 +1,4 @@
-package tests.steps;
+package steps;
 
 import com.pages.Page;
 import com.pages.home.Homepage;
@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public final class CommonSteps {
 

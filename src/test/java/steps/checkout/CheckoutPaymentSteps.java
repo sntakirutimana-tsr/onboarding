@@ -1,4 +1,4 @@
-package tests.steps.checkout;
+package steps.checkout;
 
 import com.utils.DriverProvider;
 import io.cucumber.java.en.*;

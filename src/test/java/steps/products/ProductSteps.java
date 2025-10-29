@@ -1,6 +1,6 @@
-package tests.steps.products;
+package steps.products;
 
-import tests.steps.CommonSteps;
+import steps.CommonSteps;
 
 import com.pages.product.ProductsPage;
 import com.utils.RunContext;
@@ -8,7 +8,7 @@ import com.utils.RunContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public final class ProductSteps {
 

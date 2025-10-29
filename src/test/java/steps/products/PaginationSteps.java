@@ -1,6 +1,6 @@
-package tests.steps.products;
+package steps.products;
 
-import tests.steps.CommonSteps;
+import steps.CommonSteps;
 
 import com.pages.product.StorePage;
 import com.utils.RunContext;
@@ -9,7 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public final class PaginationSteps {
 

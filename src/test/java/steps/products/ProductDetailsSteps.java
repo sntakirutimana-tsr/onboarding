@@ -1,28 +1,22 @@
-package tests.steps.products;
+package steps.products;
 
-import com.pages.home.Homepage;
-import com.pages.product.ProductsPage;
-import com.pages.product.components.cards.RegularProdCard;
 import com.utils.DriverProvider;
 import com.utils.RunContext;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import tests.steps.CommonSteps;
+import steps.CommonSteps;
 
 
 import java.time.Duration;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductDetailsSteps {
   @Given("the customer is on the homepage")

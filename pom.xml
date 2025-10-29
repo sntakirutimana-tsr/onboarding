@@ -9,9 +9,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <cucumber.version>7.18.0</cucumber.version>
+    <cucumber.version>7.30.0</cucumber.version>
     <selenium.version>7.5.1</selenium.version>
-    <junit.version>5.10.0</junit.version>
+    <junit.version>6.0.0</junit.version>
   </properties>
 
   <dependencies>
@@ -22,34 +22,32 @@
       <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
+      <artifactId>cucumber-junit-platform-engine</artifactId>
       <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
 
-    <!-- JUnit5 -->
+    <!-- JUnit 5 (Jupiter + Suite API) -->
     <dependency>
-      <groupId>org.junit.vintage</groupId>
-      <artifactId>junit-vintage-engine</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-
-    <!-- Hamcrest: Library for writing matcher objects -->
     <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest</artifactId>
-      <version>3.0</version>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-suite-api</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
     </dependency>
 
     <!-- Selenium -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.37.0</version>
+      <version>4.38.0</version>
     </dependency>
 
     <!-- WebDriverManager: Auto-manage browser drivers -->
@@ -81,46 +79,13 @@
   </dependencies>
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
-    <testResources>
-      <testResource>
-        <directory>src/test/resources</directory>
-        <filtering>true</filtering>
-      </testResource>
-    </testResources>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.14.0</version>
         <configuration>
           <release>16</release>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.5.3</version>
-        <configuration>
-          <printSummary>true</printSummary>
-          <redirectTestOutputToFile>false</redirectTestOutputToFile>
-          <useFile>false</useFile>
-          <reportFormat>brief</reportFormat>
-          <trimStackTrace>true</trimStackTrace>
         </configuration>
       </plugin>
     </plugins>

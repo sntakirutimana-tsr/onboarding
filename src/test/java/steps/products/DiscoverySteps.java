@@ -1,6 +1,6 @@
-package tests.steps.products;
+package steps.products;
 
-import tests.steps.CommonSteps;
+import steps.CommonSteps;
 
 import com.pages.product.components.SubCategoryFilter;
 import com.pages.product.components.PriceRangeFilter;
@@ -19,7 +19,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public final class DiscoverySteps {
 

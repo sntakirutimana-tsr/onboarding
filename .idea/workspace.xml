@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Enable ci to run on push and put all drivers in headless mode">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+    <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="refactor: Refactor project to align with junit5">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/CommonSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/products/BrowseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/products/BrowseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/products/DiscoverySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/products/DiscoverySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/products/PaginationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/products/PaginationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/products/ProductDetailsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/products/ProductDetailsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/products/ProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/products/ProductSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/products/ReviewSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/products/ReviewSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +91,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sprint/3-automation",
+    "git-widget-placeholder": "sprint/4-automation",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/steve/Projects/onboarding",
     "project.structure.last.edited": "Modules",
@@ -256,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761566017301</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor: Refactor project to align with junit5">
+      <option name="closed" value="true" />
+      <created>1761733853742</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761733853743</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -264,14 +279,15 @@
     <MESSAGE value="Fix issues with pagination.feature" />
     <MESSAGE value="Refactor common steps file" />
     <MESSAGE value="Enable ci to run on push and put all drivers in headless mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enable ci to run on push and put all drivers in headless mode" />
+    <MESSAGE value="refactor: Refactor project to align with junit5" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Refactor project to align with junit5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/tests/steps/checkout/PaymentMethodSteps.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/steps/checkout/PaymentMethodSteps.java</url>
           <line>21</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>

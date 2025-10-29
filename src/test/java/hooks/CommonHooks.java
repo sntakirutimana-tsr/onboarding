@@ -1,4 +1,4 @@
-package tests.hooks;
+package hooks;
 
 import com.utils.DriverProvider;
 import com.utils.RunContext;
