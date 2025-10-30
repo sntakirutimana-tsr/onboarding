@@ -7,10 +7,11 @@
   <packaging>jar</packaging>
 
   <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <cucumber.version>7.30.0</cucumber.version>
-    <selenium.version>7.5.1</selenium.version>
     <junit.version>6.0.0</junit.version>
   </properties>
 
@@ -57,37 +58,6 @@
       <version>5.9.2</version>
     </dependency>
 
-    <!-- Slf4j and Logback: Logging framework -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>2.0.17</version>
-    </dependency>
-
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.5.18</version>
-    </dependency>
-
-    <!-- Lombok: Library for reducing boilerplate code in Java -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.38</version>
-    </dependency>
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.14.0</version>
-        <configuration>
-          <release>16</release>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
