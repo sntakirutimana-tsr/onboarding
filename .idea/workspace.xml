@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Enable ci to run on push and put all drivers in headless mode">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/productdetails/review.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hooks/CommonHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hooks/CommonHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/review.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/view-product-details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/productdetails/view-product-details.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +104,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TestSolutions\Downloads\onboarding\src\test\resources\features\productdetails" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pages.product" />
     </key>
