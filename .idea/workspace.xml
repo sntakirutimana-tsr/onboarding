@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Enable ci to run on push and put all drivers in headless mode">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/productdetails/review.feature" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/review.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/view-product-details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/productdetails/view-product-details.feature" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PropertyUtils.java" afterDir="false" />
+>>>>>>> 6299aa5b0e49022021f5469691714103e55a4cd8
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,23 +98,30 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "sprint/4-automation",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/steve/Projects/onboarding",
+    "last_opened_file_path": "D:/DevEnv/bdd/onboarding",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+<<<<<<< HEAD
+    "project.structure.last.edited": "SDKs",
+=======
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
+>>>>>>> 6299aa5b0e49022021f5469691714103e55a4cd8
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\TestSolutions\Downloads\onboarding\src\test\resources\features\productdetails" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="constants" />
+      <recent name="utils" />
       <recent name="com.pages.product" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunSmokeTests">
+  <component name="RunManager" selected="JUnit.RunRegressionTests (1)">
     <configuration name="Feature: review" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature" />
@@ -209,13 +219,21 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RunSmokeTests" />
         <item itemvalue="JUnit.RunRegressionTests (1)" />
+        <item itemvalue="JUnit.RunSmokeTests" />
         <item itemvalue="Cucumber Java.Feature: review" />
         <item itemvalue="Cucumber Java.Scenario: Customer select preferred payment method" />
         <item itemvalue="Cucumber Java.Scenario: Customer select preferred payment method - @regression - Example n°1" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add complete logic for homepage">
@@ -232,6 +250,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761215632224</updated>
+      <workItem from="1761811412294" duration="919000" />
     </task>
     <task id="LOCAL-00002" summary="Fix issues with pagination.feature">
       <option name="closed" value="true" />
@@ -267,6 +286,9 @@
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />
