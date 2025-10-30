@@ -6,21 +6,18 @@ import io.cucumber.java.Before;
 
 import org.openqa.selenium.WebDriver;
 
-
 public class CommonHooks {
-
 
   private WebDriver driver;
 
   @Before
   public void before() {
-    driver = DriverFactory.initializeDriver();
-
+    String browser = System.getProperty("browser", "chrome");
+    driver = DriverFactory.initializeDriver(browser);
   }
 
   @After
-  public  void  after(){
+  public void after() {
     driver.quit();
   }
-
 }
