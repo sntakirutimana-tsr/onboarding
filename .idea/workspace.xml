@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Enable ci to run on push and put all drivers in headless mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hooks/CommonHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hooks/CommonHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/steve/Projects/onboarding",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -109,7 +105,7 @@
       <recent name="com.pages.product" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunSmokeTests">
+  <component name="RunManager" selected="JUnit.RunRegressionTests (1)">
     <configuration name="Feature: review" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature" />
@@ -207,8 +203,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RunSmokeTests" />
         <item itemvalue="JUnit.RunRegressionTests (1)" />
+        <item itemvalue="JUnit.RunSmokeTests" />
         <item itemvalue="Cucumber Java.Feature: review" />
         <item itemvalue="Cucumber Java.Scenario: Customer select preferred payment method" />
         <item itemvalue="Cucumber Java.Scenario: Customer select preferred payment method - @regression - Example n°1" />
