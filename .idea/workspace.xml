@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Enable ci to run on push and put all drivers in headless mode">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hooks/CommonHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hooks/CommonHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PropertyUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,67 +43,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.All Features in: onboarding.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: browse.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: pagination.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer browses products by category or store page.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°3.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°4.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°5.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°6.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°7.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by price range.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by valid sub-category -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer filters products by valid sub-category -  - Example n°7.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer searches a product by name.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer select preferred payment method - @regression - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer select preferred payment method.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°4.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Customer sorts products by valid criteria.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System rejects invalid billing details.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System rejects invalid category filter -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: System returns no products for unknown product name.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunRegressionTests (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunRegressionTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunSmokeTests.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.onboarding [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.onboarding [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sprint/4-automation&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/steve/Projects/onboarding&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.All Features in: onboarding.executor": "Run",
+    "Cucumber Java.Feature: browse.executor": "Run",
+    "Cucumber Java.Feature: pagination.executor": "Run",
+    "Cucumber Java.Scenario: .executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°4.executor": "Run",
+    "Cucumber Java.Scenario: Customer browses products by category or store page.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°3.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°4.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°5.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°6.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range - @smoke - Example n°7.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by price range.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by valid price range -  - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by valid sub-category -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer filters products by valid sub-category -  - Example n°7.executor": "Run",
+    "Cucumber Java.Scenario: Customer navigates through paginated results -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1 (1).executor": "Run",
+    "Cucumber Java.Scenario: Customer refines product discovery by combining filters and sorters -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer searches a product by name.executor": "Run",
+    "Cucumber Java.Scenario: Customer select preferred payment method - @regression - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer select preferred payment method.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°4.executor": "Run",
+    "Cucumber Java.Scenario: Customer sorts products by valid criteria.executor": "Run",
+    "Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: System rejects invalid billing details.executor": "Run",
+    "Cucumber Java.Scenario: System rejects invalid category filter -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: System rejects invalid sorting criterion -  - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2 (1).executor": "Run",
+    "Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2.executor": "Run",
+    "Cucumber Java.Scenario: System returns no products for unknown product name.executor": "Run",
+    "JUnit.RunRegressionTests (1).executor": "Run",
+    "JUnit.RunRegressionTests.executor": "Run",
+    "JUnit.RunSmokeTests.executor": "Run",
+    "Maven.onboarding [clean].executor": "Run",
+    "Maven.onboarding [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "sprint/4-automation",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/DevEnv/bdd/onboarding",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="constants" />
+      <recent name="utils" />
       <recent name="com.pages.product" />
     </key>
   </component>
@@ -215,6 +219,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add complete logic for homepage">
       <option name="closed" value="true" />
@@ -230,6 +242,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761215632224</updated>
+      <workItem from="1761811412294" duration="919000" />
     </task>
     <task id="LOCAL-00002" summary="Fix issues with pagination.feature">
       <option name="closed" value="true" />
@@ -265,6 +278,9 @@
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add complete logic for homepage" />
