@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05c5427-bc0c-4c7e-b23d-ecd999b8878b" name="Changes" comment="Enable ci to run on push and put all drivers in headless mode">
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PropertyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/factory/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/factory/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunSmokeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +49,8 @@
   "keyToString": {
     "Cucumber Java.All Features in: onboarding.executor": "Run",
     "Cucumber Java.Feature: browse.executor": "Run",
+    "Cucumber Java.Feature: customer_login.executor": "Run",
+    "Cucumber Java.Feature: customer_register.executor": "Run",
     "Cucumber Java.Feature: pagination.executor": "Run",
     "Cucumber Java.Scenario: .executor": "Run",
     "Cucumber Java.Scenario: Customer browses products by category or store page -  - Example n°1.executor": "Run",
@@ -75,6 +79,7 @@
     "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°3.executor": "Run",
     "Cucumber Java.Scenario: Customer sorts products by valid criteria -  - Example n°4.executor": "Run",
     "Cucumber Java.Scenario: Customer sorts products by valid criteria.executor": "Run",
+    "Cucumber Java.Scenario: Customer to log in with the right credentials.executor": "Run",
     "Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°1.executor": "Run",
     "Cucumber Java.Scenario: System constrains price filter to allowed range -  - Example n°2.executor": "Run",
     "Cucumber Java.Scenario: System rejects invalid billing details.executor": "Run",
@@ -83,6 +88,7 @@
     "Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2 (1).executor": "Run",
     "Cucumber Java.Scenario: System returns no products for outbound price range -  - Example n°2.executor": "Run",
     "Cucumber Java.Scenario: System returns no products for unknown product name.executor": "Run",
+    "Cucumber Java.Scenario: System to reject customer login with invalid credentials.executor": "Run",
     "JUnit.RunRegressionTests (1).executor": "Run",
     "JUnit.RunRegressionTests.executor": "Run",
     "JUnit.RunSmokeTests.executor": "Run",
@@ -92,9 +98,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sprint/4-automation",
+    "git-widget-placeholder": "authendication",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/DevEnv/bdd/onboarding",
+    "last_opened_file_path": "D:/DevEnv/bdd/onboarding/src/test/java/customTypes",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -107,20 +113,26 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DevEnv\bdd\onboarding\src\test\java\customTypes" />
+      <recent name="D:\DevEnv\bdd\onboarding\src\test\resources\features\authentication" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="domain" />
+      <recent name="pages" />
+      <recent name="steps" />
       <recent name="constants" />
       <recent name="utils" />
-      <recent name="com.pages.product" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunSmokeTests">
-    <configuration name="Feature: review" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: customer_login">
+    <configuration name="Feature: customer_login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/review.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/authentication/customer_login.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
-      <option name="SUGGESTED_NAME" value="Feature: review" />
+      <option name="SUGGESTED_NAME" value="Feature: customer_login" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -132,14 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Customer select preferred payment method - @regression - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: customer_register" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/checkout/payment-method.feature:12" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/authentication/customer_register.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer select preferred payment method$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer select preferred payment method$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer select preferred payment method - @regression - Example n°1" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: customer_register" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -151,14 +162,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Customer select preferred payment method" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: System to reject customer login with invalid credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/checkout/payment-method.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/authentication/customer_login.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="onboarding" />
-      <option name="NAME_FILTER" value="^Customer select preferred payment method$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Customer select preferred payment method$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer select preferred payment method" />
+      <option name="NAME_FILTER" value="^System to reject customer login with invalid credentials$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^System to reject customer login with invalid credentials$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: System to reject customer login with invalid credentials" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -211,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: customer_login" />
         <item itemvalue="JUnit.RunSmokeTests" />
         <item itemvalue="JUnit.RunRegressionTests (1)" />
-        <item itemvalue="Cucumber Java.Feature: review" />
-        <item itemvalue="Cucumber Java.Scenario: Customer select preferred payment method" />
-        <item itemvalue="Cucumber Java.Scenario: Customer select preferred payment method - @regression - Example n°1" />
+        <item itemvalue="Cucumber Java.Feature: customer_register" />
+        <item itemvalue="Cucumber Java.Scenario: System to reject customer login with invalid credentials" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +253,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761215632224</updated>
-      <workItem from="1761811412294" duration="919000" />
+      <workItem from="1761811412294" duration="2432000" />
+      <workItem from="1761826509988" duration="3664000" />
     </task>
     <task id="LOCAL-00002" summary="Fix issues with pagination.feature">
       <option name="closed" value="true" />
