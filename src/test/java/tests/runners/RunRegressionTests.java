@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
     "junit:target/cucumber.xml"
   },
   monochrome = true,
-  dryRun = true,
+//  dryRun = true,
   tags = "@regression"
 )
 public class RunRegressionTests {}

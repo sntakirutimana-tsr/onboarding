@@ -4,6 +4,7 @@ import com.utils.RunContext;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import com.pages.checkout.CheckoutPage;
+import tests.steps.CommonSteps;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,6 +15,7 @@ public class ChangeShippingAddressSteps {
 
   @Given("Customer is on the checkout page")
   public void customer_is_on_the_checkout_page() {
+    CommonSteps.ensureHomepageIsAccessible();
     ((CheckoutPage) RunContext.getPage()).navigateToCheckout();
   }
 

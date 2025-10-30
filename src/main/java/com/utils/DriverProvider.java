@@ -104,6 +104,7 @@ public final class DriverProvider {
         System.currentTimeMillis()
     );
     // Add isolation options
+    options.addArguments("--headless=new");
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
     options.addArguments("--disable-extensions");
