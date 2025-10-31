@@ -21,6 +21,10 @@ public class BasePage {
 
   }
 
+  public WebDriver getDriver() {
+    return driver;
+  }
+
   public void load(String url) {
     driver.get(ConfigLoader.getInstance().getBaseUrl() + url);
   }
