@@ -9,16 +9,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CartPage;
-import pages.HomePage;
+import pages.Homepage;
 
 public class AddToCartSteps {
   private WebDriver driver;
-  private HomePage homePage;
+  private Homepage homePage;
 
   @Given("Customer is on Home Page")
   public void customerIsOn() {
     driver = DriverFactory.getDriver();
-    homePage = new HomePage(driver);
+    homePage = new Homepage(driver);
     homePage.load("/");
   }
 
