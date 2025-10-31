@@ -10,10 +10,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CartPage;
 import pages.HomePage;
+import pages.ProductDetailsPage;
 
 public class AddToCartSteps {
   private WebDriver driver;
   private HomePage homePage;
+  private ProductDetailsPage productDetailPage;
 
   @Given("Customer is on Home Page")
   public void customerIsOn() {
@@ -51,16 +53,39 @@ public class AddToCartSteps {
     Assert.assertEquals(expectedSubtotal, cartPage.getProductSubtotal());
   }
 
-  // Unique steps for add to cart from product detail page
+  //Unique steps for add to cart from product detail page
+
 
   @Given("Customer is on the product page for {string}")
-  public void customerIsOnTheProductPageFor(String arg0) {
-    // My code goes here
+  public void customerIsOnTheProductPageFor(String productName) {
+
+    driver = DriverFactory.getDriver();
+    productDetailPage = new ProductDetailsPage(driver);
+    // Convert "Product Name" to "product-name" for the URL
+    String productSlug = productName.toLowerCase().replace(" ", "-");
+    productDetailPage.load("/product/" + productSlug + "/");
+
+  }
+
+  @When("Add {string} to cart")
+  public void addToCart(String arg0) {
+    productDetailPage.clickAddToCart();
   }
 
   @Then("{string} message is displayed")
-  public void hasBeenAddedToYourCartMessageIsDisplayed(String arg0) {
-    // My code will go here
+  public void hasBeenAddedToYourCartMessageIsDisplayed(String expectedMessage) {
+    String actualMessage = productDetailPage.getSuccessMessageText();
+    Assert.assertTrue(actualMessage.contains(expectedMessage));
   }
 
+
+  @And("the {string} should be in the cart with {string}, {string}, {string}")
+  public void theShouldBeInTheCartWith(String productName, String expectedPrice, String expectedQty, String expectedSubtotal) {
+    CartPage cartPage = new CartPage(driver);
+    productDetailPage.clickViewCartLink();
+    Assert.assertEquals(productName, cartPage.getProductName());
+    Assert.assertEquals(expectedPrice, cartPage.getProductPrice());
+    Assert.assertEquals(expectedQty, cartPage.getProductQuantity());
+    Assert.assertEquals(expectedSubtotal, cartPage.getProductSubtotal());
+  }
 }
