@@ -1,3 +1,4 @@
+@regression
 Feature: view product details
 
   Scenario Outline: Customer submits a review with valid inputs without choosing to save their information
@@ -8,7 +9,7 @@ Feature: view product details
     And the customer enters email as "<email>"
     And the customer clicks on the submit button
     Then the system displays a review card
-    And the review card displays a message "<message>" should be displayed
+    And the review card displays a message "<message>"
     And the review card displays the rating as "<rating>"
     And the review card displays the review as "<review>"
 
@@ -27,16 +28,14 @@ Feature: view product details
     And the customer selects the "<checkbox>" to save their information
     And customer clicks on the submit button
     Then the system displays a review card
-    And the review card displays a message "<message>" should be displayed
+    And the review card displays a message "<message>"
     And the review card displays the rating as "<rating>"
     And the review card displays the review as "<review>"
 
     Examples:
-      | rating  | review  | name   | email            | checkbox | message                         |
-      | 5 stars | nice    | ken    | ken@gmail.com    | checked  | your review is waiting approval |
-      | 3 stars | not bad | barbie | barbie@gmail.com | checked  | your review is waiting approval |
-
-
+      | rating  | review  | name | email           | checkbox | message                         |
+      | 5 stars | nice    | ken  | kenny@gmail.com | checked  | your review is waiting approval |
+      | 3 stars | not bad | barb | barb@gmail.com  | checked  | your review is waiting approval |
 
 
   Scenario Outline: system rejects review submission with invalid inputs
