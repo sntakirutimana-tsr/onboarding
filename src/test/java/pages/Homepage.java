@@ -5,6 +5,8 @@ import pages.products.ProductPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static utils.ExtendedHelpers.waitForVisibility;
 import static utils.Executor.hasEvaluatedAndSucceed;
@@ -21,6 +23,9 @@ public class Homepage extends BasePage {
 
   @FindBy(id = "menu-item-1230")
   private WebElement accessoriesOption;
+
+  private final By viewCartLink = By.cssSelector("a[title='View cart']");
+  private final By cartCount = By.cssSelector(".ast-cart-menu-wrap .count");
 
   public Homepage(WebDriver driver) {
     super(driver);
@@ -45,5 +50,26 @@ public class Homepage extends BasePage {
       default -> throw new IllegalArgumentException("Unknown menu option: " + pageName);
     }
     return new ProductPage(driver);
+  }
+
+  public void AddToCart(String productName) {
+    By addToCartButton = By.xpath("//a[contains(@aria-label, '" + productName + "')]");
+    waitFor(ExpectedConditions.elementToBeClickable(addToCartButton));
+    click(addToCartButton);
+  }
+
+  public boolean isViewCartLinkVisible() {
+    waitFor(ExpectedConditions.visibilityOfElementLocated(viewCartLink));
+    return findBy(viewCartLink).isDisplayed();
+  }
+
+  public int getCartCount() {
+    waitFor(ExpectedConditions.visibilityOfElementLocated(cartCount));
+    String text = findBy(cartCount).getText();
+    return Integer.parseInt(text);
+  }
+
+  public void clickViewCartLink() {
+    click(viewCartLink);
   }
 }
