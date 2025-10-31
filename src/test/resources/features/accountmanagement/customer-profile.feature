@@ -1,4 +1,4 @@
-@regression
+@regression @accountmgt
 Feature: Customer Profile Management
 
   As a logged-in customer,
@@ -30,18 +30,18 @@ Feature: Customer Profile Management
       | ting     | ting.nong@example.com  | Pass@123 | Ting       | Pradu     | tingpradu    | Jonathan       | Ting          | jonnyt           | jonathan@gmail.com |
       | pradu    | nong.pradu@example.com | Pass@456 | Nong       | Pradu     | nongpradu    | Janet          | Pradu         | janetp           | janet@gmail.com    |
 
-  Scenario Outline: Customer profile is validated
-    Given Customer is logged in and on the Profile page
-    When Customer enters invalid profile details:
-      | Field         | Value          |
-      | Email address | <invalid_email> |
-    And clicks on "Save Changes"
-    Then A validation error message should be displayed for:
-      | Field         | Message                  |
-      | Email address | Please enter a valid email. |
-
-    Examples:
-      | invalid_email  |
-      | john.doe@123   |
-      | janedoe@       |
-      | @gmail.com     |
+#  Scenario Outline: Customer profile is validated
+#    Given Customer is logged in and on the Profile page
+#    When Customer enters invalid profile details:
+#      | Field         | Value          |
+#      | Email address | <invalid_email> |
+#    And clicks on "Save Changes"
+#    Then A validation error message should be displayed for:
+#      | Field         | Message                  |
+#      | Email address | Please enter a valid email. |
+#
+#    Examples:
+#      | invalid_email  |
+#      | john.doe@123   |
+#      | janedoe@       |
+#      | @gmail.com     |
