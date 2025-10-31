@@ -12,7 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <cucumber.version>7.30.0</cucumber.version>
-    <junit.version>6.0.0</junit.version>
+    <junit.version>5.10.3</junit.version>
   </properties>
 
   <dependencies>
@@ -30,7 +30,7 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- JUnit 5 (Jupiter + Suite API) -->
+    <!-- JUnit 5 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
@@ -39,8 +39,8 @@
     </dependency>
     <dependency>
       <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-suite-api</artifactId>
-      <version>${junit.version}</version>
+      <artifactId>junit-platform-suite</artifactId>
+      <version>1.10.3</version>
       <scope>test</scope>
     </dependency>
 
@@ -51,13 +51,19 @@
       <version>4.38.0</version>
     </dependency>
 
-    <!-- WebDriverManager: Auto-manage browser drivers -->
+    <!-- WebDriverManager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
       <version>5.9.2</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.16</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
 </project>
