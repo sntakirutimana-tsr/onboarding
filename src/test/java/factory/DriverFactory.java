@@ -12,7 +12,6 @@ public class DriverFactory {
 
   public static WebDriver initializeDriver(String browser) {
 
-    browser = "edge";
     switch (browser) {
       case "chrome":
         WebDriverManager.chromedriver().setup();
