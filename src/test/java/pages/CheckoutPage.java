@@ -118,12 +118,16 @@ public class CheckoutPage extends BasePage {
 
   // Payment Selection
   public void selectPaymentMethod(String paymentMethod) {
+    waitFor(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".blockUI.blockOverlay")));
+
     switch (paymentMethod.toLowerCase()) {
       case "direct bank transfer":
-        findBy(bankTransferRadio).click();
+//        findBy(bankTransferRadio).click();
+        safeClick(bankTransferRadio);
         break;
       case "cash on delivery":
-        findBy(cashOnDeliveryRadio).click();
+//        findBy(cashOnDeliveryRadio).click();
+        safeClick(cashOnDeliveryRadio);
         break;
       default:
         throw new IllegalArgumentException("Unknown payment method: " + paymentMethod);

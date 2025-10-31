@@ -60,7 +60,6 @@ Feature:  Checkout and Payment Process
       | Annie       | Uwamahoro       | Example Corp | United States (US) | 123 Main Street | Apt 2B    | Los Angeles | California | 90001    | +2507833657 | annie@example.com   | Thank you. Your order has been received.  |
 
     And Customer selects payment method as "<payment_method>"
-    Then the selected payment method should be active
     And Customer clicks on "Place Order" button
     Then order confirmation should show payment method as "<payment_method>"
 

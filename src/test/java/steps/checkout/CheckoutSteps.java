@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -21,7 +22,8 @@ import utils.BillingDetailsUtils;
 
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class CheckoutSteps {
 
@@ -137,35 +139,35 @@ public class CheckoutSteps {
   //  CONFIRMATION VALIDATION ==========
   @Then("Customer is redirected to the order confirmation page")
   public void customerIsRedirectedToTheOrderConfirmationPage() {
-    assertTrue( checkoutPage.isOnOrderConfirmationPage(),"Not redirected to order confirmation page!");
+    assertTrue("Not redirected to order confirmation page!", checkoutPage.isOnOrderConfirmationPage());
   }
 
   @Then("Customer is redirected to the order confirmation page with message {string} displayed")
   public void customerIsRedirectedToTheOrderConfirmationPageWithMessageDisplayed(String expectedMessage) {
     String actualMessage = checkoutPage.getConfirmationMessage();
-    assertTrue(actualMessage.contains(expectedMessage),
-      "Expected message not displayed");
+    assertTrue("Expected message not displayed",
+      actualMessage.contains(expectedMessage));
   }
 
   @And("the message {string} should be displayed")
   public void theMessageShouldBeDisplayed(String expectedMessage) {
     String actualMessage = checkoutPage.getConfirmationMessage();
-    assertTrue(actualMessage.contains(expectedMessage),
-      "Expected message not displayed");
+    assertTrue("Expected message not displayed",
+      actualMessage.contains(expectedMessage));
   }
 
   @And("the confirmation page should display detailed order information")
   public void theConfirmationPageShouldDisplayDetailedOrderInformation() {
-    assertFalse(checkoutPage.getConfirmationMessage().isEmpty(),
-      "Order details header not visible");
+    assertFalse("Order details header not visible",
+      checkoutPage.getConfirmationMessage().isEmpty());
   }
 
   // ========== ERROR VALIDATION ==========
   @Then("the error message {string} should be displayed")
   public void theErrorMessageShouldBeDisplayed(String expectedError) {
     String actualError = checkoutPage.getErrorMessage();
-    assertTrue(actualError.contains(expectedError),
-      "Expected error not displayed");
+    assertTrue("Expected error not displayed",
+      actualError.contains(expectedError));
   }
 
   // ========== PAYMENT ==========
@@ -174,16 +176,12 @@ public class CheckoutSteps {
     checkoutPage.selectPaymentMethod(paymentMethod);
   }
 
-  @Then("the selected payment method should be active")
-  public void theSelectedPaymentMethodShouldBeActive() {
-    assertTrue(true, "Payment method selection failed");
-  }
 
   @Then("order confirmation should show payment method as {string}")
   public void orderConfirmationShouldShowPaymentMethodAs(String expectedPaymentMethod) {
     String confirmation = checkoutPage.getPaymentConfirmationMessage();
-    assertTrue(confirmation.toLowerCase().contains(expectedPaymentMethod.toLowerCase()),
-      "Payment method not displayed correctly");
+    assertTrue("Payment method not displayed correctly",
+      confirmation.toLowerCase().contains(expectedPaymentMethod.toLowerCase()));
   }
 
   //  ORDER NOTES
@@ -195,8 +193,7 @@ public class CheckoutSteps {
 
   @Then("the order confirmation page should include the note {string}")
   public void theOrderConfirmationPageShouldIncludeTheNote(String expectedNote) {
-    assertEquals(expectedNote, orderNote.getNote(),
-      "Order note mismatch");
+    Assert.assertEquals("Order note mismatch", expectedNote, orderNote.getNote());
   }
 
 

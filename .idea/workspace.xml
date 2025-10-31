@@ -7,9 +7,9 @@
     <list default="true" id="5e219f50-5a7f-4584-8e73-b9bbd26b52d6" name="Changes" comment="refactor: remove hardcoded browser opt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunRegressionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/checkout/payment-method.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/checkout/CheckoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/checkout/CheckoutSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/checkout/place-order.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
