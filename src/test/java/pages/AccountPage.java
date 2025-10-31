@@ -17,6 +17,17 @@ public class AccountPage extends BasePage {
     @FindBy(xpath = "//ul[contains(@class,'woocommerce-error')]//li")
     private WebElement errorMessageEl;
 
+    @FindBy(id = "reg_username")
+    private WebElement registrationUsernameFld;
+
+    @FindBy(id = "reg_email")
+    private WebElement registrationEmailFld;
+
+    @FindBy(id = "reg_password")
+    private WebElement registrationPasswordFld;
+
+    @FindBy(css = ".woocommerce-form-register__submit")
+    private WebElement registerBtn;
 
     public AccountPage(WebDriver driver) {
         super(driver);
@@ -44,8 +55,28 @@ public class AccountPage extends BasePage {
         return welcomeMessagePara.getText();
     }
 
-    public String getErrorMessage(){
+    public String getErrorMessage() {
         wait.until(ExpectedConditions.elementToBeClickable(errorMessageEl));
         return errorMessageEl.getText();
+    }
+
+    public void enterRegistrationUsername(String username) {
+        wait.until(ExpectedConditions.elementToBeClickable(registrationUsernameFld));
+        registrationUsernameFld.sendKeys(username);
+    }
+
+    public void enterRegistrationEmail(String email) {
+        wait.until(ExpectedConditions.elementToBeClickable(registrationEmailFld));
+        registrationEmailFld.sendKeys(email);
+    }
+
+    public void enterRegistrationPassword(String password) {
+        wait.until(ExpectedConditions.elementToBeClickable(registrationPasswordFld));
+        registrationPasswordFld.sendKeys(password);
+    }
+
+    public void submitRegistrationForm() {
+        wait.until(ExpectedConditions.elementToBeClickable(registerBtn));
+        registerBtn.click();
     }
 }

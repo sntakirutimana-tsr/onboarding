@@ -1,4 +1,4 @@
-@regression
+@regression @authentication
 Feature: Customer registration
 
   Background:
@@ -10,7 +10,7 @@ Feature: Customer registration
       | email   | username   | password   |
       | <email> | <username> | <password> |
     And Customer submit registration form
-    Then Customer should be registered with "<username>" displayed
+    Then Customer with "<username>" should be registered with a welcome message displayed
 
     Examples:
       | email                 | username | password |
@@ -28,9 +28,9 @@ Feature: Customer registration
 
     Examples:
       | email          | username | password | error_message                          |
-      | test@gmail.com |          | test123  | Please enter a valid account username. |
-      |                | eric     | test123  | Please provide a valid email address.  |
-      | test@gmail.com | eric     |          | Please enter an account password.      |
-      | user@com       | eric     | test123  | Please provide a valid email address.  |
-      | test@gmail.com | *        | test123  | Please enter a valid account username. |
+      | test@gmail.com |          | test123  | Error: Please enter a valid account username. |
+      |                | eric     | test123  | Error: Please provide a valid email address.  |
+      | test@gmail.com | eric     |          | Error: Please enter an account password.      |
+      | user@com       | eric     | test123  | Error: Please provide a valid email address.  |
+      | test@gmail.com | *        | test123  | Error: Please enter a valid account username. |
       # Browser Validations

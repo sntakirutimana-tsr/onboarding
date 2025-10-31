@@ -1,4 +1,4 @@
-@authentication
+@authentication @regression
 Feature: Customer Login
 
   Background:

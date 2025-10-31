@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import pages.AccountPage;
 import utils.ConfigLoader;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class CustomerLoginSteps {
   private WebDriver driver;
