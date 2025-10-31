@@ -6,3 +6,5 @@ tmp/
 /**.db
 /**.env
 !/**.env.test
+.idea/
+logs/
