@@ -1,22 +1,20 @@
 package steps;
 
-import static org.junit.Assert.*;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-
 import constants.Endpoint;
+import domain.Customer;
 import factory.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import pages.AccountPage;
 import utils.ConfigLoader;
+
+import java.util.Random;
+
+import static org.junit.Assert.assertEquals;
 
 public class CustomerRegistrationSteps {
   private String randomUsername;
@@ -29,19 +27,19 @@ public class CustomerRegistrationSteps {
   }
 
   @When("Customer provides valid credentials")
-  public void customerProvidesValidCredentials(List<Map<String, String>> credentials) {
+  public void customerProvidesValidCredentials(Customer customer) {
     Random random = new Random();
 
-    randomUsername = credentials.get(0).get("username") + random.nextInt(10000);
-    String randomEmail = credentials.get(0).get("email") + random.nextInt(10000);
-    String password = credentials.get(0).get("password");
+    randomUsername = customer.getUsername() + random.nextInt(10000);
+    String randomEmail = customer.getEmail() + random.nextInt(10000);
+    String password = customer.getPassword();
 
     accountPage.enterRegistrationUsername(randomUsername);
     accountPage.enterRegistrationEmail(randomEmail);
     accountPage.enterRegistrationPassword(password);
   }
 
-  @And("Customer submit registration form")
+  @And("Customer clicks REGISTER button")
   public void customerSubmitRegistrationForm() {
     accountPage.submitRegistrationForm();
   }
@@ -54,11 +52,11 @@ public class CustomerRegistrationSteps {
   }
 
   @When("Customer provides invalid credentials")
-  public void customerProvidesInvalidCredentials(List<Map<String, String>> credentials) {
-    Map<String, String> credential = credentials.get(0);
-    String email = credential.get("email");
-    String username = credential.get("username");
-    String password = credential.get("password");
+  public void customerProvidesInvalidCredentials(Customer customer) {
+
+    String email = customer.getEmail();
+    String username = customer.getUsername();
+    String password = customer.getPassword();
 
     email = email == null ? "" : email;
     username = username == null ? "" : username;

@@ -9,7 +9,7 @@ Feature: Customer registration
     When Customer provides valid credentials
       | email   | username   | password   |
       | <email> | <username> | <password> |
-    And Customer submit registration form
+    And Customer clicks REGISTER button
     Then Customer with "<username>" should be registered with a welcome message displayed
 
     Examples:
@@ -22,7 +22,7 @@ Feature: Customer registration
     When Customer provides invalid credentials
       | email   | username   | password   |
       | <email> | <username> | <password> |
-    And Customer submit registration form
+    And Customer clicks REGISTER button
     Then Registration fails with message "<error_message>" displayed
     And Customer remains on the registration form
 

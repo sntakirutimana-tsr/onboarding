@@ -8,7 +8,7 @@ Feature: Customer Login
     When customer enters valid credentials
       | username_or_email   | password   |
       | <username_or_email> | <password> |
-    And Customer submit login form
+    And Customer click on LOGIN button
     Then Customer, "<username>" is logged in
 
     Examples:
@@ -20,7 +20,7 @@ Feature: Customer Login
     When customer enters invalid credentials
       | username_or_email   | password   |
       | <username_or_email> | <password> |
-    And Customer submit login form
+    And Customer click on LOGIN button
     Then Login fails with message "<error_message>" displayed
     And Customer stays login form
 

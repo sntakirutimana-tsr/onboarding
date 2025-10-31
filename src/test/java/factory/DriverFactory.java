@@ -11,6 +11,7 @@ public class DriverFactory {
   private static WebDriver driver;
 
   public static WebDriver initializeDriver(String browser) {
+
     switch (browser) {
       case "chrome":
         WebDriverManager.chromedriver().setup();

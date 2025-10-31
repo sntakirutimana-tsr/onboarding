@@ -38,7 +38,7 @@ public class CustomerLoginSteps {
     accountPage.enterPassword(password);
   }
 
-  @And("Customer submit login form")
+  @And("Customer click on LOGIN button")
   public void customerClicksOnButton() {
     accountPage.submitLoginForm();
   }
