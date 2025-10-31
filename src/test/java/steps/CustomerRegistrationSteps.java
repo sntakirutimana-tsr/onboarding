@@ -1,5 +1,12 @@
 package steps;
 
+import static org.junit.Assert.*;
+
+import java.util.Random;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+
 import constants.Endpoint;
 import domain.Customer;
 import factory.DriverFactory;
@@ -7,14 +14,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import pages.AccountPage;
 import utils.ConfigLoader;
-
-import java.util.Random;
-
-import static org.junit.Assert.assertEquals;
 
 public class CustomerRegistrationSteps {
   private String randomUsername;
@@ -76,5 +77,11 @@ public class CustomerRegistrationSteps {
   @And("Customer remains on the registration form")
   public void customerRemainsOnTheRegistrationForm() {
     assertEquals(ConfigLoader.getInstance().getBaseUrl() + "/account/", driver.getCurrentUrl());
+  }
+
+  @Then("Browser should show email validation message {string}")
+  public void browserShouldShowEmailValidationMessage(String message) {
+    String validationMessage = accountPage.getRegistrationEmailValidationMessage();
+    assertEquals(validationMessage, message);
   }
 }

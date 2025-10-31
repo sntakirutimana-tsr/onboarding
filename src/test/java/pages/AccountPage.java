@@ -79,4 +79,8 @@ public class AccountPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(registerBtn));
         registerBtn.click();
     }
+
+  public String getRegistrationEmailValidationMessage() {
+    return registrationEmailFld.getAttribute("validationMessage");
+  }
 }
