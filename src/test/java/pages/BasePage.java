@@ -50,10 +50,12 @@ public class BasePage {
   }
 
   public void type(WebElement element, String value) {
+    if (value == null) value = "";
+    element.clear();
     element.sendKeys(value);
   }
 
-  public void waitFor(ExpectedCondition<?> conditions) {
-    wait.until(conditions);
+  public <T> T waitFor(ExpectedCondition<T> condition) {
+    return wait.until(condition);
   }
 }
