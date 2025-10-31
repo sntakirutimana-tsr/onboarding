@@ -1,3 +1,4 @@
+@regression @checkout
 Feature:  Checkout and Payment Process
 
   Background:
@@ -18,8 +19,7 @@ Feature:  Checkout and Payment Process
     And Customer enters Phone as "<phone>"
     And Customer enters Email Address as "<email>"
     And Customer clicks on "Place Order" button
-    Then Customer is redirected to the order confirmation page
-    And the message "<confirmation_msg>" should be displayed
+    Then Customer is redirected to the order confirmation page with message "<confirmation_msg>" displayed
     And the confirmation page should display detailed order information
 
 
@@ -54,9 +54,27 @@ Feature:  Checkout and Payment Process
       | Annie      | Uwamahoro | ABC Corp     | United States (US) | 123 Main St    | Apt 4A    | Los Angeles | California | 90001    | +2507833657 |                 | Billing Email address is a required field.      |
       | Annie      | Uwamahoro | ABC Corp     | United States (US) | 123 Main St    | Apt 4A    | Los Angeles | California | 90001    | +2507833657 | annie           | Invalid billing email address                   |
 
+  Scenario Outline: Customer selects preferred payment method
+    When Customer fills all valid billing details
+      | first_name  | last_name       | company_name | country            | street_address  | apartment | city        | state      | zip_code | phone       | email               | confirmation_msg                          |
+      | Annie       | Uwamahoro       | Example Corp | United States (US) | 123 Main Street | Apt 2B    | Los Angeles | California | 90001    | +2507833657 | annie@example.com   | Thank you. Your order has been received.  |
+
+    And Customer selects payment method as "<payment_method>"
+    And Customer clicks on "Place Order" button
+    Then order confirmation should show payment method as "<payment_method>"
+
+    Examples:
+      | payment_method       |
+      | Direct bank transfer |
+      | Cash on delivery     |
 
 
 
+  Scenario: Customer adds order notes
+    When Customer fills valid billing details
+      | first_name  | last_name       | company_name | country            | street_address  | apartment | city        | state      | zip_code | phone       | email               | confirmation_msg                          |
+      | Annie       | Uwamahoro       | Example Corp | United States (US) | 123 Main Street | Apt 2B    | Los Angeles | California | 90001    | +2507833657 | annie@example.com   | Thank you. Your order has been received.  |
 
-
-
+    And Customer adds order notes "Please leave the package at the front desk"
+    And Customer clicks on "Place Order" button
+    Then the order confirmation page should include the note "Please leave the package at the front desk"
