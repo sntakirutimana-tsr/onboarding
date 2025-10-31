@@ -1,0 +1,9 @@
+target/
+build/
+bin/
+temp/
+tmp/
+/**.db
+/**.env
+!/**.env.test
+.idea/
