@@ -2,11 +2,10 @@ package utils;
 
 import java.util.function.BooleanSupplier;
 
-public class Executor {
-  private Executor() {
-  }
+public final class Executor {
+  private Executor() {}
 
-  public static boolean hasEvaluatedAndSucceed(Runnable runnable) {
+  public static boolean hasEvaluatedSuccessfully(Runnable runnable) {
     try {
       runnable.run();
       return true;

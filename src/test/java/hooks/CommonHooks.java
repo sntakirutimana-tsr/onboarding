@@ -1,6 +1,9 @@
 package hooks;
 
 import factory.DriverFactory;
+
+import utils.RunContext;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -19,5 +22,6 @@ public class CommonHooks {
   @After
   public void after() {
     driver.quit();
+    RunContext.clear();
   }
 }

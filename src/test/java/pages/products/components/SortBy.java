@@ -3,29 +3,23 @@ package pages.products.components;
 import pages.BasePage;
 import pages.products.ProductPage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import static utils.ExtendedHelpers.*;
-
 public final class SortBy extends Component {
+  private final By selectLocator = By.tagName("select");
 
-  public SortBy(WebDriver driver, WebElement root) {
-    super(driver, root);
+  public SortBy(WebDriver driver, By root) {
+    super(driver, root, null);
   }
 
-  @Override
-  public void ensureIsReady() {
-    waitForElementToBeInteractive(getDriver(), getRoot(), 5);
-  }
-
-  public String getSelectedText() {
-    return new Select(getRoot()).getFirstSelectedOption().getText();
+  public String getSelectionChoiceVisibleText() {
+    return new Select(findBy(selectLocator)).getFirstSelectedOption().getText();
   }
 
   public BasePage selectOption(String criterion) {
-    select(getDriver(), getRoot(), criterion);
+    selectByContainsVisibleText(selectLocator, criterion);
     return new ProductPage(getDriver());
   }
 }

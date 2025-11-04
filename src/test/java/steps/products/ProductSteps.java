@@ -21,8 +21,7 @@ public final class ProductSteps {
 
   @Then("a message {string} should be displayed")
   public void message_should_be_displayed(String expectedResultsCountMsg) {
-    ProductList list = ((ProductPage) RunContext.currentPage).getProductList();
-    list.ensureIsReady();
-    assertEquals(expectedResultsCountMsg, list.getResultsCountMsg());
+    ProductList productList = ((ProductPage) RunContext.currentPage).productList();
+    assertEquals(expectedResultsCountMsg, productList.getResultsCountMsg());
   }
 }

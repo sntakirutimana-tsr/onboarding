@@ -21,21 +21,24 @@ public final class CommonSteps {
 
   public static BasePage ensureHomepageIsAccessible() {
     Homepage page = new Homepage(DriverFactory.getDriver());
-    page.load("");
-    assertTrue(page.isReady());
+    page.visit("");
     return page;
   }
 
   public static ProductPage ensureProductPageIsAccessible(Homepage home, String name) {
     ProductPage page = home.browseProducts(name);
-    assertTrue(page.isReady());
+    String headerText = name
+      .replaceAll("'s$", "")
+      .replaceAll("’", "'")
+      .toLowerCase();
+
+    assertEquals(headerText, page.getHeaderText().toLowerCase());
+    assertFalse(page.productList().items().isEmpty());
     return page;
   }
 
   public static ProductPage ensureProductPageIsAccessible(String name) {
     Homepage home = (Homepage) CommonSteps.ensureHomepageIsAccessible();
-    ProductPage page = home.browseProducts(name);
-    assertTrue(page.isReady());
-    return page;
+    return ensureProductPageIsAccessible(home, name);
   }
 }

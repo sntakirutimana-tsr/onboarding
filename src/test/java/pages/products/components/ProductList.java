@@ -3,31 +3,28 @@ package pages.products.components;
 import pages.products.components.cards.ProductCard;
 import pages.products.components.cards.RegularProdCard;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
-import static utils.Executor.hasEvaluatedAndSucceed;
-import static utils.ExtendedHelpers.*;
+import static utils.Executor.hasEvaluatedSuccessfully;
 
 public final class ProductList extends Component {
-  @FindBy(css = "p.woocommerce-result-count")
-  private WebElement resultsCounter;
-  @FindBy(css = "ul.products li")
-  private List<WebElement> items;
-  @FindBy(css = "nav.woocommerce-pagination")
-  private WebElement paginatorShadow;
-
-  private final Paginator paginator;
+  private final By resultsCounterLocator = By.cssSelector("p.woocommerce-result-count");
+  private final By itemLocator = By.cssSelector("ul.products li");
+  private final By paginatorLocator = By.cssSelector("nav.woocommerce-pagination");
 
   public ProductList(WebDriver driver) {
-    super(driver);
-    paginator = new Paginator(driver, paginatorShadow);
+    super(driver, null, null);
+  }
+
+  public List<WebElement> items() {
+    return findAllBy(itemLocator);
   }
 
   int totalProductCount() {
@@ -51,7 +48,7 @@ public final class ProductList extends Component {
   }
 
   List<RegularProdCard> toObjects() {
-    return items.stream()
+    return items().stream()
       .map(i -> new RegularProdCard(getDriver(), i))
       .toList();
   }
@@ -87,15 +84,15 @@ public final class ProductList extends Component {
   public boolean hasOnlyItemsWithCategory(String category) {
     return toObjects()
       .stream()
-      .allMatch(p -> hasEvaluatedAndSucceed(() -> p.ensureIsReady(category)));
+      .allMatch(p -> hasEvaluatedSuccessfully(() -> p.hasAllNecessaryDetails(category)));
   }
 
   public String getResultsCountMsg() {
-    return getText(resultsCounter);
+    return getText(resultsCounterLocator);
   }
 
   public Paginator getPaginator() {
-    return paginator;
+    return new Paginator(getDriver(), paginatorLocator);
   }
 
   public List<String> getNames() {
@@ -105,9 +102,7 @@ public final class ProductList extends Component {
       .toList();
   }
 
-  @Override
-  public void ensureIsReady() {
-    waitForVisibility(getDriver(), resultsCounter, 5);
-    waitFor(getDriver(), d -> items.size() == totalProductCount(), 5);
+  public boolean hasTheRightNumberOfItems() {
+    return hasEvaluatedSuccessfully(() -> getWait().until(d -> items().size() == totalProductCount()));
   }
 }

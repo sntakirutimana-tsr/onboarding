@@ -2,9 +2,9 @@ package steps.products;
 
 import steps.CommonSteps;
 
-import pages.products.components.ProductList;
 import pages.Homepage;
 import pages.products.ProductPage;
+import pages.products.components.ProductList;
 
 import utils.RunContext;
 
@@ -22,8 +22,9 @@ public final class BrowseSteps {
 
   @And("a list of products should be displayed, each showing an image, name, category as {string}, rating as stars, and price")
   public void list_of_products_should_be_displayed(String expectedCategory) {
-    ProductList list = ((ProductPage) RunContext.currentPage).getProductList();
-    assertTrue(list.hasOnlyItemsWithCategory(expectedCategory));
+    ProductList productList = ((ProductPage) RunContext.currentPage).productList();
+    assertTrue(productList.hasTheRightNumberOfItems());
+    assertTrue(productList.hasOnlyItemsWithCategory(expectedCategory));
   }
 
   @And("the ❝Our Best Sellers❞ section should display three products, each showing an image, name, rating as stars, and price")

@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class FormatUtils {
-  private FormatUtils() {
+public final class Formatters {
+  private Formatters() {
   }
 
   public static String f(String template, Object... args) {

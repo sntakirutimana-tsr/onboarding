@@ -5,94 +5,58 @@ import pages.products.components.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import static utils.Executor.*;
-import static utils.ExtendedHelpers.*;
 
 public class ProductPage extends BasePage {
-  @FindBy(css = "h1")
-  private WebElement header;
-  @FindBy(id = "woocommerce_product_search-1")
-  private WebElement searchByNameShadow;
-  @FindBy(id = "woocommerce_top_rated_products-3")
-  private WebElement ourBestSellersShadow;
-  @FindBy(id = "woocommerce_price_filter-3")
-  private WebElement priceFilterShadow;
-  @FindBy(css = "select[name='orderby']")
-  private WebElement sortByShadow;
-  @FindBy(id = "woocommerce_product_categories-3")
-  private WebElement categoryFilterShadow;
-
-  private final SearchByName searchByName;
-  private final ProductList productList;
-  private final SortBy sortBy;
-  private final OurBestSellers ourBestSellers;
-  private final SubCategoryFilter subCategoryFilter;
-  private final PriceRangeFilter priceRangeFilter;
+  private final By searchByNameLocator = By.id("woocommerce_product_search-1");
+  private final By ourBestSellersLocator = By.id("woocommerce_top_rated_products-3");
+  private final By priceFilterLocator = By.id("woocommerce_price_filter-3");
+  private final By sortByLocator = By.cssSelector("form.woocommerce-ordering");
+  private final By categoryFilterLocator = By.id("woocommerce_product_categories-3");
 
   public ProductPage(WebDriver driver) {
     super(driver);
-
-    searchByName = new SearchByName(driver, searchByNameShadow);
-    productList = new ProductList(driver);
-    sortBy = new SortBy(driver, sortByShadow);
-    ourBestSellers = new OurBestSellers(driver, ourBestSellersShadow);
-    subCategoryFilter = new SubCategoryFilter(driver, categoryFilterShadow);
-    priceRangeFilter = new PriceRangeFilter(driver, priceFilterShadow);
-  }
-
-  public WebElement getHeader() {
-    return header;
   }
 
   public String getHeaderText() {
-    return getText(header);
+    return getText(By.tagName("h1"));
   }
 
-  public ProductList getProductList() {
-    return productList;
+  public ProductList productList() {
+    return new ProductList(getDriver());
   }
 
-  public SearchByName getSearchByName() {
-    return searchByName;
+  public SearchByName searchByName() {
+    return new SearchByName(getDriver(), searchByNameLocator);
   }
 
-  public SortBy getSortBy() {
-    return sortBy;
+  public SortBy sortBy() {
+    return new SortBy(getDriver(), sortByLocator);
   }
 
-  public OurBestSellers getOurBestSellers() {
-    return ourBestSellers;
+  OurBestSellers ourBestSellers() {
+    return new OurBestSellers(getDriver(), ourBestSellersLocator);
   }
 
-  public SubCategoryFilter getCategoryFilter() {
-    return subCategoryFilter;
+  public SubCategoryFilter subCategoryFilter() {
+    return new SubCategoryFilter(getDriver(), categoryFilterLocator);
   }
 
-  public PriceRangeFilter getPriceFilter() {
-    return priceRangeFilter;
+  public PriceRangeFilter priceFilter() {
+    return new PriceRangeFilter(getDriver(), priceFilterLocator);
   }
 
   public final boolean hasNoProductFoundMessage() {
-    return hasEvaluatedAndSucceed(() ->
-      waitForVisibility(
-        driver,
-        By.xpath("//p[contains(@class, 'woocommerce-no-products-found') and contains(text(), 'No products were found matching your selection.')]"), 5));
+    return hasEvaluatedSuccessfully(() ->
+      findBy(
+        By.xpath(
+          "//p[contains(@class, 'woocommerce-no-products-found') and contains(text(), 'No products were found matching your selection.')]")
+      )
+    );
   }
 
   public boolean hasOurBestSeller() {
-    return hasEvaluatedAndSucceed(ourBestSellers::ensureIsReady);
-  }
-
-  public boolean isReady() {
-    return hasEvaluatedAndSucceed(() -> {
-      waitForVisibility(driver, header, 10);
-      waitForVisibility(driver, searchByNameShadow, 2);
-      waitForVisibility(driver, sortByShadow, 2);
-      waitForVisibility(driver, categoryFilterShadow, 2);
-      waitForVisibility(driver, priceFilterShadow, 2);
-    });
+    return hasEvaluatedSuccessfully(ourBestSellers()::ensureHasTitleAndThreeProducts);
   }
 }

@@ -3,34 +3,26 @@ package pages.products.components;
 import pages.BasePage;
 import pages.products.ProductPage;
 
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static utils.ExtendedHelpers.*;
-
 public final class SearchByName extends Component {
-  @FindBy(id = "woocommerce-product-search-field-0")
-  private WebElement field;
-  @FindBy(xpath = "//button[@type='submit' and text()='Search']")
-  private WebElement button;
+  private final By searchFieldLocator = By.id("woocommerce-product-search-field-0");
+  private final By buttonLocator = By.xpath("//button[@type='submit' and text()='Search']");
 
-  public SearchByName(WebDriver driver, WebElement root) {
-    super(driver, root);
+  public SearchByName(WebDriver driver, By root) {
+    super(driver, root, null);
   }
 
   public void type(String keyword) {
-    field.sendKeys(keyword);
+    type(searchFieldLocator, keyword);
   }
 
   public BasePage search() {
-    button.click();
+    WebElement element = findBy(searchFieldLocator);
+    click(buttonLocator);
+    waitForStalenessOf(element);
     return new ProductPage(getDriver());
-  }
-
-  @Override
-  public void ensureIsReady() {
-    waitForElementToBeInteractive(getDriver(), field, 5);
-    waitForVisibility(getDriver(), button, 3);
   }
 }
