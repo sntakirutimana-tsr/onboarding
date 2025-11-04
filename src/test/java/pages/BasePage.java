@@ -3,59 +3,49 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.ConfigLoader;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.jspecify.annotations.NonNull;
 
-import java.time.Duration;
+import static utils.Envs.BASE_URI;
+import static utils.Formatters.f;
 
-public class BasePage {
-  protected WebDriver driver;
-  protected WebDriverWait wait;
+public abstract class BasePage extends Concerns {
 
-  public BasePage(WebDriver driver) {
-    this.driver = driver;
-    wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-    PageFactory.initElements(driver, this);
-
+  public BasePage(WebDriver webDriver) {
+    super(webDriver);
   }
 
-  public WebDriver getDriver() {
-    return driver;
-  }
-
-  public void load(String url) {
-    driver.get(ConfigLoader.getInstance().getBaseUrl() + url);
+  public void visit(String url) {
+    getDriver().get(f("{}/{}", BASE_URI, url));
   }
 
   public WebElement findBy(By locator) {
-    return driver.findElement(locator);
-  }
-
-  public void click(WebElement element) {
-    element.click();
+    return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
   }
 
   public void click(By locator) {
-    findBy(locator).click();
+    waitForInteractivenessOf(locator).click();
   }
 
-  public String getText(WebElement element) {
-    return element.getText();
+  public String getText(By locator) {
+    return findBy(locator).getText();
   }
 
-  public String getAttribute(WebElement element, String name) {
-    return element.getAttribute(name);
+  public void type(By locator, @NonNull String value) {
+    waitForInteractivenessOf(locator).sendKeys(value);
   }
 
-  public void type(WebElement element, String value) {
-    if (value == null) value = "";
-    element.clear();
-    element.sendKeys(value);
+  public void selectByContainsVisibleText(By locator, @NonNull String value) {
+    Select selector = new Select(findBy(locator));
+    selector.selectByContainsVisibleText(value);
   }
 
-  public <T> T waitFor(ExpectedCondition<T> condition) {
-    return wait.until(condition);
+  protected WebElement waitForInteractivenessOf(By locator) {
+    return getWait().until(ExpectedConditions.elementToBeClickable(locator));
+  }
+
+  protected void waitForStalenessOf(WebElement element) {
+    getWait().until(ExpectedConditions.stalenessOf(element));
   }
 }

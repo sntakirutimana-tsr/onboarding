@@ -2,7 +2,7 @@ package pages.products.components.cards;
 
 import pages.products.components.Component;
 
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,37 +10,37 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import static utils.FormatUtils.*;
+import static utils.Formatters.*;
 import static utils.Executor.*;
 
 public abstract class ProductCard extends Component {
-  @FindBy(tagName = "img")
-  private WebElement img;
-  @FindBy(css = ".onsale")
-  private WebElement saleBadge;
-  @FindBy(css = ".woocommerce-Price-amount.amount bdi")
-  private List<WebElement> priceTags;
-  @FindBy(css = ".star-rating > span")
-  private WebElement rating;
-  @FindBy(xpath = "//a[text()='Add to cart']")
-  private WebElement addToCartButton;
+  private final By imgLocator = By.tagName("img");
+  private final By onsaleLocator = By.className("onsale");
+  private final By priceLocator = By.cssSelector(".woocommerce-Price-amount.amount bdi");
+  private final By ratingLocator = By.cssSelector(".star-rating > span");
+  private final By addToCartLocator = By.xpath("//a[text()='Add to cart']");
 
-  public ProductCard(WebDriver driver, WebElement root) {
-    super(driver, root);
+  public ProductCard(WebDriver webDriver, WebElement root) {
+    super(webDriver, null, root);
+  }
+
+  List<WebElement> priceTags() {
+    return findAllBy(priceLocator);
   }
 
   boolean isOnSale() {
-    return hasEvaluatedAndSucceed(saleBadge::isDisplayed) || priceTags.size() == 2;
+    return priceTags().size() == 2 ||
+      hasEvaluatedSuccessfully(() -> getRootElement().findElement(onsaleLocator).isDisplayed());
   }
 
   boolean hasPrice() {
     if (isOnSale())
       return getPrice(0) > getPrice(1);
-    return priceTags.size() == 1 && getText(priceTags.getFirst()).matches("^\\$\\d+(\\.\\d{2})?$");
+    return priceTags().size() == 1 && priceTags().getFirst().getText().matches("^\\$\\d+(\\.\\d{2})?$");
   }
 
   boolean hasCategory(String expectedCategory) {
-    List<String> actualCategories = extractFormattedCategories(getRoot().getAttribute("class"));
+    List<String> actualCategories = extractFormattedCategories(getRootElement().getAttribute("class"));
     return Arrays.stream(expectedCategory.split(","))
       .map(String::trim)
       .map(String::toLowerCase)
@@ -48,18 +48,18 @@ public abstract class ProductCard extends Component {
   }
 
   public double getRating() {
-    String value = rating.getAttribute("style");
+    String value = findBy(ratingLocator).getAttribute("style");
     return Double.parseDouble(Objects.requireNonNull(value).replaceAll("\\D", ""));
   }
 
   public String getName() {
-    return getText(getTitle());
+    return getText(title());
   }
 
-  protected abstract WebElement getTitle();
+  protected abstract By title();
 
   double getPrice(int tagIndex) {
-    String value = getText(priceTags.get(tagIndex));
+    String value = priceTags().get(tagIndex).getText();
     return extractPrice(value);
   }
 
@@ -67,17 +67,19 @@ public abstract class ProductCard extends Component {
     return getPrice(isOnSale() ? 1 : 0);
   }
 
-  @Override
-  public void ensureIsReady() {
-    raiseIf(img::isDisplayed);
-    raiseIf(() -> getTitle().isDisplayed() && !getName().isBlank());
-    raiseIf(() -> getRating() >= 0 && getRating() <= 100);
+  public void hasAllNecessaryDetails() {
+    raiseIf(findBy(imgLocator)::isDisplayed);
+    raiseIf(() -> findBy(title()).isDisplayed() && !getName().isBlank());
+    raiseIf(() -> {
+      double rate = getRating();
+      return rate >= 0 && rate <= 100;
+    });
     raiseIf(this::hasPrice, "Product must have one or two price tags");
   }
 
-  public void ensureIsReady(String category) {
-    ensureIsReady();
+  public void hasAllNecessaryDetails(String category) {
+    hasAllNecessaryDetails();
     raiseIf(() -> hasCategory(category));
-    raiseIf(() -> addToCartButton.isDisplayed(), "Must have the ❝ADD TO CARD❞ button");
+    raiseIf(findBy(addToCartLocator)::isDisplayed, "Must have the ❝ADD TO CARD❞ button");
   }
 }
