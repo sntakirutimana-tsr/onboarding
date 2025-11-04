@@ -2,6 +2,7 @@ package factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -15,7 +16,13 @@ public class DriverFactory {
     switch (browser) {
       case "chrome":
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--disable-features=VizDisplayCompositor");
+        driver = new ChromeDriver(options);
         break;
       case "edge":
         WebDriverManager.edgedriver().setup();
@@ -28,8 +35,6 @@ public class DriverFactory {
       default:
         throw new IllegalArgumentException("INVALID BROWSER: " + browser);
     }
-
-    driver.manage().window().maximize();
     return driver;
   }
 
